@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-fatec-web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "serve": "vite preview",
+    "deploy": "gh-pages -d docs -r https://${DEPLOY_TOKEN}:x-oauth-basic@github.com/silasprd/portfolio-fatec-web.git"
+  },
+  "dependencies": {
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.5",
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "vue-tsc": "^2.0.21"
+  }
+}
