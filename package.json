@@ -11,7 +11,8 @@
     "deploy": "gh-pages -d docs -r https://${DEPLOY_TOKEN}:x-oauth-basic@github.com/silasprd/portfolio-fatec-web.git"
   },
   "dependencies": {
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

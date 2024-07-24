@@ -1,43 +1,65 @@
-html, body{
+html, body, .app, main{
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  background-color: #fafdea;
 }
 
 .container{
   display: flex;
-  width: 100%;
-  padding: 0 100px;
-  box-sizing: border-box;
-
+  padding: 0 7%;
 }
 .person{
   display: flex;
   align-items: center;
 }
+.intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 h1, h2, h3{
   text-align: left;
+  color: #00272d;
+  /* color: #000706; */
 }
 h1{
   margin-block: 0;
 }
 .semesters{
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .semesters-box{
-  padding: 30px;
+  padding: 5px;
+  font-weight: 600;
+  color: #fafdea;
+  background-color: #0c7e7e;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #134647;
+  flex: 1 1 calc(16% - 20px);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+  font-size: 14px;;
   margin-right: 10px;
-  background-color: aquamarine;
 }
 
-.semesters-box:last-child{
-  margin-right: 0;
+a{
+  text-decoration: none;
+  color: #fafdea;
+}
+
+.semesters-box:hover{
+  background-color: #134647;
+  box-shadow: 2px 2px 2px 2px #0c7e7e;
 }
 
 p{
   font-size: 18px;
-  text-align: center;
+  color: #134647;
 }
