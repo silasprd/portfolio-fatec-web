@@ -9,7 +9,7 @@ import SemesterSix from '../components/SemesterSix.vue';
 
 const routes: any = [
   {
-    path : '/',
+    path : '/portfolio-fatec-web',
     name : 'Home',
     component: Home
   },
