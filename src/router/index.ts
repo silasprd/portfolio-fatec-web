@@ -14,11 +14,6 @@ const routes: any = [
     component: Home
   },
   {
-    path : '/portfolio-fatec-web',
-    name : 'Home',
-    component: Home
-  },
-  {
     path : '/semestre-1',
     name : 'Semestre 1',
     component: SemesterOne
