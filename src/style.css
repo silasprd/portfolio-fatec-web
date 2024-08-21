@@ -4,15 +4,17 @@ html, body, .app, main{
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 20px 0 0 0;
   font-family: "Montserrat", sans-serif;
   background-color: #fafdea;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .container{
   display: flex;
-  padding: 0 7%;
-  margin-top: 4%;
+  padding: 0 100px;
+  height: 100vh;
+  box-sizing: border-box;
 }
 .person{
   display: flex;
@@ -75,7 +77,6 @@ p{
 .section{
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: flex-start;
   width: 800px;
 }
@@ -86,4 +87,40 @@ p{
 
 .section h3{
   margin-block-end: 0;
+}
+
+@media screen and (max-width: 768px) {
+  html, body, .app, main{
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+  .container{
+    flex-direction: column;
+    padding: 0;
+  }
+
+  figure{
+    display: flex;
+    justify-content: center;
+    margin-block: 0;
+    margin-inline: 0;
+  }
+  .person figure img{
+    width: 90%;
+  }
+
+  .semesters-box{
+    margin: 0;
+  }
+
+  .section, .box{
+    width: 100%;
+  }
+
+  .title img{
+    width: 100%;
+  }
 }

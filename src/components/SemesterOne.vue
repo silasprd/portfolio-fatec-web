@@ -8,7 +8,7 @@ import "../style.css"
       <h2>1º Semestre • 1/2022 - BoardClass</h2>
       <h3>Repositório: <a href="https://github.com/silasprd/BoardClass">GIT</a></h3>
       <h3>Parceiro Acadêmico: <a href="https://fatecsjc-prd.azurewebsites.net/" target="_blank">Faculdade de Tecnologia
-          de São José dos Campos</a></h3>
+          de São José dos Campos - FATEC</a></h3>
       <img src="/src/assets/semester1/boardclass.jpeg" alt="boardclass" width="800">
     </section>
 
@@ -309,9 +309,9 @@ import "../style.css"
     <section class="section">
       <h3>Hard Skills</h3>
       <ul>
-        <li><b>ReactJS: </b> Possuo habilidades avançadas em ReactJS, sendo capaz de desenvolver interfaces complexas de forma eficiente e escalável. Meu conhecimento inclui o uso de componentes, hooks, roteamento e gerenciamento de estado com Redux ou Context API.</li><br>
-        <li><b>HTML e CSS: </b>Domínio de HTML e CSS, sendo capaz de criar layouts responsivos, estilizados com autonomia e o uso eficiente de flexbox e grid.</li><br>
-        <li><b>Javascript: </b>Conhecimento sólido em JavaScript, utilizando-o para implementar interatividade e lógica de negócio nas aplicações web. Estou familiarizado com conceitos como manipulação do DOM, eventos, promessas e assincronicidade.</li><br>
+        <li><b>ReactJS: </b> Desenvolvimento de habilidades avançadas em ReactJS, sendo capaz de desenvolver interfaces complexas de forma eficiente e escalável. Meu conhecimento inclui o uso de componentes, hooks, roteamento e gerenciamento de estado com Redux ou Context API.</li><br>
+        <li><b>HTML e CSS: </b>Domínio de HTML e CSS, utilizando-os para criar layouts responsivos, estilizados com autonomia e o uso eficiente de flexbox e grid.</li><br>
+        <li><b>Javascript: </b>Conhecimento solidificado em JavaScript, utilizando-o para implementar interatividade e lógica de negócio nas aplicações web. Estou familiarizado com conceitos como manipulação do DOM, eventos, promessas e assincronicidade.</li><br>
         <li><b>Integração de Reconheimento de Voz: </b> Adquiri habilidades intermediárias na integração de sistemas de reconhecimento de voz em aplicações web. Durante o projeto, aprendi a utilizar APIs e bibliotecas para captura e processamento de comandos de voz.</li><br>
         <li><b>Análise de Requisitos e Design de Interface: </b>Desenvolvi habilidades avançadas na análise de requisitos de projeto e no design de interfaces de usuário. Minha capacidade inclui a compreensão das necessidades do usuário e a tradução dessas necessidades em soluções de design eficazes e intuitivas.</li>
       </ul>
