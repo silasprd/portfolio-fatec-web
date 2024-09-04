@@ -23,19 +23,19 @@ import "../style.css"
       <br>
       <div>
         <img align="center" alt="Figma-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg">
-        Figma: Design
+        <b>Figma:</b> Design
       </div>
       <div>
         <img align="center" alt="Java-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
-          Java: Ecossistema
+        <b>Java:</b> Ecossistema
       </div>
       <div>
         <img align="center" alt="JavaFX-icon" height="35" width="50" src="../assets/semester2/JavaFX.png">
-          JavaFX: Frontend
+        <b>JavaFX:</b> Frontend
       </div>
       <div>
         <img align="center" alt="Postgres-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg">
-          PostgresSQL: Banco de dados
+        <b>PostgresSQL:</b> Banco de dados
       </div>   
     </section>
     <br><br>
