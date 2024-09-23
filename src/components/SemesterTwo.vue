@@ -6,7 +6,7 @@ import "../style.css"
   <div class="box">
     <section class="title">
       <h2>2º Semestre • 7/2022 - RH4Vox</h2>
-      <h3>Repositório: <a href="https://github.com/equipe-vox/api-2sem">GIT</a></h3>
+      <h3>Repositório: <a href="https://github.com/equipe-vox/api-2sem" target="_blank">GIT</a></h3>
       <h3>Parceiro Acadêmico: <a href="https://www.pro4tech.com.br/" target="_blank">Pro4Tech</a></h3>
       <img src="/src/assets/semester2/rh4vox.png" alt="boardclass" width="800" height="500">
     </section>

@@ -6,7 +6,7 @@ import "../style.css"
   <div class="box">
     <section class="title">
       <h2>3º Semestre • 1/2023 - Sistema Gerenciador de Vendas</h2>
-      <h3>Repositório: <a href="https://github.com/equipe-vox/api-3">GIT</a></h3>
+      <h3>Repositório: <a href="https://github.com/equipe-vox/api-3" target="_blank">GIT</a></h3>
       <h3>Parceiro Acadêmico: <a href="https://www.domrock.net/" target="_blank">DomRock</a></h3>
       <img src="/src/assets/semester3/domrock.png" alt="boardclass" width="800">
     </section>

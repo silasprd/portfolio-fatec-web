@@ -6,7 +6,7 @@ import "../style.css"
   <div class="box">
     <section class="title">
       <h2>1º Semestre • 1/2022 - BoardClass</h2>
-      <h3>Repositório: <a href="https://github.com/silasprd/BoardClass">GIT</a></h3>
+      <h3>Repositório: <a href="https://github.com/silasprd/BoardClass" target="_blank">GIT</a></h3>
       <h3>Parceiro Acadêmico: <a href="https://fatecsjc-prd.azurewebsites.net/" target="_blank">Faculdade de Tecnologia
           de São José dos Campos - FATEC</a></h3>
       <img src="/src/assets/semester1/boardclass.jpeg" alt="boardclass" width="800">
