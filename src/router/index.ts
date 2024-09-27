@@ -14,32 +14,32 @@ const routes: any = [
     component: Home
   },
   {
-    path : '/semestre-1',
+    path : '/portfolio-fatec-web/semestre-1',
     name : 'Semestre 1',
     component: SemesterOne
   },
   {
-    path : '/semestre-2',
+    path : '/portfolio-fatec-web/semestre-2',
     name : 'Semestre 2',
     component: SemesterTwo
   },
   {
-    path : '/semestre-3',
+    path : '/portfolio-fatec-web/semestre-3',
     name : 'Semestre 3',
     component: SemesterThree
   },
   {
-    path : '/semestre-4',
+    path : '/portfolio-fatec-web/semestre-4',
     name : 'Semestre 4',
     component: SemesterFour   
   },
   {
-    path : '/semestre-5',
+    path : '/portfolio-fatec-web/semestre-5',
     name : 'Semestre 5',
     component: SemesterFive
   },
   {
-    path : '/semestre-6',
+    path : '/portfolio-fatec-web/semestre-6',
     name : 'Semestre 6',
     component: SemesterSix
   },
