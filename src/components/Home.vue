@@ -13,8 +13,8 @@ import "../style.css"
 
       Estou sempre aprimorando meus conhecimentos em desenvolvimento web e novas tecnologias, com foco em oferecer soluções criativas e eficientes.</p>
       <div class="contact">
-        <a href="https://github.com/silasprd">Github</a>
-        <a href="https://github.com/silasprd">Linkedin</a>
+        <router-link to="https://github.com/silasprd">Github</router-link>
+        <router-link to="https://github.com/silasprd">Linkedin</router-link>
       </div>
       <br>
     </div>
@@ -63,39 +63,39 @@ import "../style.css"
   <br><br>
   <div class="portfolios">
     <div>
-      <a href="/portfolio-fatec-web/semestre-1">
+      <router-link to="/portfolio-fatec-web/semestre-1">
         <img src="/src/assets/semester1/boardclass.jpeg" alt="boardclass" width="800">
-      </a>
+      </router-link>
       <h4>Semestre 1</h4>
     </div>
     <div>
-      <a href="/portfolio-fatec-web/semestre-2">
+      <router-link to="/portfolio-fatec-web/semestre-2">
         <img src="/src/assets/semester2/image.png" alt="boardclass" width="800">
-      </a>
+      </router-link>
       <h4>Semestre 2</h4>
     </div>
     <div>
-      <a href="/portfolio-fatec-web/semestre-3">
+      <router-link to="/portfolio-fatec-web/semestre-3">
         <img src="/src/assets/semester3/domrock.png" alt="boardclass" width="800">
-      </a>
+      </router-link>
       <h4>Semestre 3</h4>
     </div>
     <div>
-      <a href="/portfolio-fatec-web/semestre-4">
+      <router-link to="/portfolio-fatec-web/semestre-4">
         <img src="/src/assets/semester4/jaia_logo.png" alt="boardclass" width="800">
-      </a>
+      </router-link>
       <h4>Semestre 4</h4>
     </div>
     <div>
-      <a href="/portfolio-fatec-web/semestre-5">
+      <router-link to="/portfolio-fatec-web/semestre-5">
         <img src="/src/assets/semester1/boardclass.jpeg" alt="boardclass" width="800">
-      </a>
+      </router-link>
       <h4>Semestre 5</h4>
     </div>
     <div>
-      <a href="/portfolio-fatec-web/semestre-6">
+      <router-link to="/portfolio-fatec-web/semestre-6">
         <img src="/src/assets/semester1/boardclass.jpeg" alt="boardclass" width="800">
-      </a>
+      </router-link>
       <h4>Semestre 6</h4>
     </div>
   </div>
