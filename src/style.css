@@ -12,19 +12,79 @@ html, body, .app, main{
 
 .container{
   display: flex;
-  padding: 0 100px;
-  height: 100vh;
+  padding: 3% 100px;
   box-sizing: border-box;
+}
+
+.portfolios{
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 100px;
+}
+
+.portfolios div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolios img{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  box-shadow: 0px 2px 2px 1px #00000060;
+  cursor: pointer;
+}
+
+.portfolios img:hover{
+  box-shadow: 0px 2px 2px 1px #000000;
+}
+
+.knowledges{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .person{
   display: flex;
+  flex-direction: column;
   align-items: center;
+  width: 100%;
 }
+
+.person img{
+  width: 300px;
+}
+
+.person h2{
+  margin-block: 0;
+  margin-inline: 0;
+}
+
 .intro{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  width: 100%;
 }
+
+.knowledges li{
+  padding: 5px 0;
+  list-style: none;
+}
+
+.intro .contact a{
+  margin-right: 20px;
+  font-weight: bolder;
+  font-size: 18px;
+  color: #0c7e7e;
+}
+
+.intro .contact a:hover{
+  color: #134647;
+}
+
 h1, h2, h3{
   text-align: left;
   color: #00272d;
