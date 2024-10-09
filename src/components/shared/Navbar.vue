@@ -1,6 +1,6 @@
 <template>
     <div class="navbar-container">
-        <router-link to="/portfolio-fatec-web" :class="getPath('/portfolio-fatec-web/')">SOBRE</router-link>
+        <router-link to="/portfolio-fatec-web/" :class="getPath('/portfolio-fatec-web/')">SOBRE</router-link>
         <router-link to="/portfolio-fatec-web/apis" :class="getPath('/portfolio-fatec-web/apis')">API's</router-link>
         <router-link to="/portfolio-fatec-web/contato" :class="getPath('/portfolio-fatec-web/contato')">CONTATO</router-link>
     </div>
@@ -10,6 +10,8 @@
     import { useRoute } from 'vue-router';
 
     const route = useRoute()
+
+    console.log(route.path)
 
     const getPath = (path: string) => {
         return route.path === path ? 'active' : '';

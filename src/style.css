@@ -73,7 +73,7 @@ header{
       color: #47c7c7;
     }
     i{
-      font-size: 28px;
+      font-size: 32px;
       margin-right: 20px;
       color: white;
     }
@@ -213,16 +213,46 @@ a{
 }
 
 .container-apis{
-  margin-top: 10%;
+  margin-top: 30px;
   ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     list-style: none;
+    padding-inline: 0;
     li{
+      width: 150px;
+      height: 300px;
       margin: 10px;
-      background-color: #47c7c7;
-      padding: 20px;
+      background-color: #47c7c730;
+      padding: 10px;
       font-weight: bolder;
+      color: #47c7c7;
+      img{
+        width: 100%;
+        height: 130px;
+        background-color: #47c7c750;
+      }
+      p{
+        color: white;
+        font-size: 12px;
+        font-weight: 400;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 7; /* Limita a quantidade de linhas, aqui 3 */
+        -webkit-box-orient: vertical;
+      }
+      span{
+        display: flex;
+        width: 100%;
+        justify-content: end;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+    li:hover{
+      background-color: #47c7c750;
+      span{
+        font-weight: 600;
+      }
     }
   }
 }

@@ -8,10 +8,10 @@ import "../style.css"
     <div class="intro">
       
       <div class="name">
-        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-circle-user"></i>
         <h1>Silas Rafael Barreto Prado</h1>
       </div>
-      <br>
+      <br><br>
       <div class="contact">
         <div>
           <a href="https://github.com/silasprd" target="_blank">
