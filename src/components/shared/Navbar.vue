@@ -2,7 +2,7 @@
     <div class="navbar-container">
         <router-link to="/portfolio-fatec-web" :class="getPath('/portfolio-fatec-web/')">SOBRE</router-link>
         <router-link to="/portfolio-fatec-web/apis" :class="getPath('/portfolio-fatec-web/apis')">API's</router-link>
-        <router-link to="/portfolio-fatec-web/about" :class="getPath('/portfolio-fatec-web/contato')">CONTATO</router-link>
+        <router-link to="/portfolio-fatec-web/contato" :class="getPath('/portfolio-fatec-web/contato')">CONTATO</router-link>
     </div>
 </template>
 
