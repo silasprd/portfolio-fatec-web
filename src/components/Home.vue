@@ -14,16 +14,16 @@ import "../style.css"
       <br>
       <div class="contact">
         <div>
-          <router-link to="https://github.com/silasprd">
+          <a href="https://github.com/silasprd" target="_blank">
             <i class="fa-brands fa-github"></i>
             Github
-          </router-link>
+          </a>
         </div>
         <div>
-          <router-link to="https://github.com/silasprd">
+          <a href="https://www.linkedin.com/in/silasprd/" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
             Linkedin
-          </router-link>
+          </a>
         </div>
       </div>
       <br>
