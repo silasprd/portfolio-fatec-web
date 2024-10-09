@@ -1,18 +1,23 @@
-html, body, .app, main{
+html, body, .app, main, #app{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  background-color: #fafdea;
+  background: linear-gradient(to right, #092038, #0b3e5f);
+  background-size: cover;
   box-sizing: border-box;
   margin: 0;
 }
 
+header{
+  width: 100%;
+}
+
 .container{
   display: flex;
-  padding: 3% 100px;
+  padding: 3% 0 50px 100px;
   box-sizing: border-box;
 }
 
@@ -31,63 +36,113 @@ html, body, .app, main{
 }
 
 .portfolios img{
-  width: 200px;
   height: 200px;
   border-radius: 100%;
   box-shadow: 0px 2px 2px 1px #00000060;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .portfolios img:hover{
   box-shadow: 0px 2px 2px 1px #000000;
 }
 
-.knowledges{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
 .person{
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
+  align-items: center;
+  figure{
+    margin: 0;
+    img{
+      width: 300px;
+    }
+  }
 }
 
-.person img{
-  width: 300px;
-}
 
-.person h2{
-  margin-block: 0;
-  margin-inline: 0;
-}
 
 .intro{
   display: flex;
   flex-direction: column;
   width: 100%;
+  .name{
+    display: flex;
+    align-items: center;
+    h1{
+      color: #47c7c7;
+    }
+    i{
+      font-size: 28px;
+      margin-right: 20px;
+      color: white;
+    }
+  }
+  .contact{
+    display: flex;
+    a{
+      margin-right: 20px;
+      font-weight: bolder;
+      font-size: 18px;
+      color: #47c7c7;
+      background-color: #000000;
+      padding: 10px;
+    }
+    a:hover{
+      color: #134647;
+    }
+  }
+  p{
+    color: white;
+    font-size: 16px;
+    line-height: 1.4rem;
+    text-align: justify;
+  }
 }
 
-.knowledges li{
-  padding: 5px 0;
-  list-style: none;
-}
-
-.intro .contact a{
-  margin-right: 20px;
-  font-weight: bolder;
-  font-size: 18px;
-  color: #0c7e7e;
-}
-
-.intro .contact a:hover{
-  color: #134647;
+.knowledges {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 80px;
+  box-sizing: border-box;
+  .title{
+    display: flex;
+    align-self: end;
+    h1{
+      color: #47c7c7;
+    }
+    i{
+      font-size: 32px;
+      margin-left: 20px;
+      color: white;
+    }
+  }
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 0;
+    li{
+      background-color: #47c7c730;
+      display: flex;
+      padding: 10px;
+      list-style: none;
+      font-size: 14px;
+      margin: 5px;
+      b{
+        color: #47c7c7;
+      }
+      p{
+        margin-left: 10px;
+        margin-block: 0;
+        color: white;
+      }
+    }
+  }
 }
 
 h1, h2, h3{
   text-align: left;
-  color: #00272d;
   /* color: #000706; */
 }
 h1{
@@ -121,23 +176,31 @@ a{
   box-shadow: 2px 2px 2px 2px #0c7e7e;
 }
 
-p{
-  font-size: 18px;
-  color: #134647;
-}
-
 .box{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 800px;
+  .title{
+    h2, h3{
+      color: #47c7c7;
+    }
+    a{
+      color: white;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #47c7c7;
+    }
+  }
 }
 
 .section{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  color: white;
   width: 800px;
 }
 
@@ -147,6 +210,21 @@ p{
 
 .section h3{
   margin-block-end: 0;
+}
+
+.container-apis{
+  margin-top: 10%;
+  ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    li{
+      margin: 10px;
+      background-color: #47c7c7;
+      padding: 20px;
+      font-weight: bolder;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
