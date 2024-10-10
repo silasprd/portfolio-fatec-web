@@ -51,15 +51,15 @@ import "../style.css"
         </li>
         <li>
           <img align="center" alt="Java-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
-          <p><b>Java: </b>Colaborei no desenvolvimento de projetos acadêmicos para diversas empresas utilizando Java. Dentre os projetos estão projetos de gestão de vagas de emprego, sistema gerenciador de vendas e um também software de inspeção predial .</p>
+          <p><b>Java: </b>Colaborei no desenvolvimento de projetos acadêmicos para diversas empresas utilizando Java e Springboot. Dentre os projetos estão projetos de gestão de vagas de emprego, sistema gerenciador de vendas e um software de inspeção predial .</p>
         </li>
         <li>
           <img align="center" alt="Java-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg">
-          <p><b>Go: </b>Desenvolvi pequenos projetos pessoais utilizando a linguagem Go. Dentre eles, um sistema de gerenciamento de veículos com possibilidade de envio de contatos.</p>
+          <p><b>Go: </b>Desenvolvi pequenos projetos pessoais utilizando a linguagem Go. Dentre eles, um sistema de gerenciamento de veículos com possibilidade de envio de contatos. Atualmente faço pequenos projetos para estudo utilizando a linguagem.</p>
         </li>
         <li>       
           <img align="center" alt="Python-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />        
-          <p><b>Python: </b>Aprimorei minhas habilidades em python durante meu período na faculdade, onde desenvolvi exemplos de criptografia e socket. Também fui desafiado a desenvolver um jogo de Batalha Naval reduzido, para matéria de algoritmos, conforme especificações do professor, onde fui contemplado com a nota máxima(10).</p>
+          <p><b>Python: </b>Aprimorei minhas habilidades em python durante meu período na faculdade, onde pude desenvolver algoritmos como exemplos de criptografia e socket. Também fui desafiado a desenvolver um jogo de Batalha Naval reduzido, para matéria de algoritmos, conforme especificações do professor, onde fui contemplado com a nota máxima(10).</p>
         </li>
         <li>
           <img align="center" alt="JS-icon" height="35" width="50"
