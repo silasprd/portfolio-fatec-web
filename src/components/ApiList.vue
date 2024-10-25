@@ -27,7 +27,7 @@
                     <span>saiba mais >></span>
                 </li>
             </router-link>
-            <router-link to="/portfolio-fatec-web/semestre-3">
+            <router-link to="/portfolio-fatec-web/semestre-4">
                 <li>
                     <img src="../assets/semester4/jaia_logo.png"/>
                     4° Semestre
@@ -35,7 +35,7 @@
                     <span>saiba mais >></span>
                 </li>
             </router-link>
-            <router-link to="/portfolio-fatec-web/semestre-4">
+            <router-link to="/portfolio-fatec-web/semestre-5">
                 <li>
                     <img src="../assets/semester5/tecsus-logo.png"/>
                     5° Semestre
@@ -43,7 +43,7 @@
                     <span>saiba mais >></span>
                 </li>
             </router-link>
-            <router-link to="/portfolio-fatec-web/semestre-1">
+            <router-link to="/portfolio-fatec-web/semestre-6">
                 <li>
                     <img src="../assets/semester6/spc-logo.png"/>
                     6° Semestre
