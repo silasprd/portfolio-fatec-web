@@ -214,6 +214,13 @@ a{
 
 .container-apis{
   margin-top: 30px;
+  h1{
+    color: white;
+  }
+  p{
+    color: white;
+    width: 900px;
+  }
   ul{
     display: flex;
     list-style: none;
@@ -234,6 +241,7 @@ a{
       p{
         color: white;
         font-size: 12px;
+        width: 100%;
         font-weight: 400;
         overflow: hidden;
         display: -webkit-box;

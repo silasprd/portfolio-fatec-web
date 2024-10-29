@@ -1,5 +1,8 @@
 <template>
     <div class="container-apis">
+        <h1>Aprendizagem por Projetos Integrados(API)</h1>
+        <p>É uma metodologia aplicada nas Faculdades de Tecnologia (FATEC) para integrar conhecimentos de diferentes disciplinas em projetos práticos, ao longo do curso. O API foca no desenvolvimento de soluções reais, muitas vezes baseadas em desafios de empresas parceiras ou problemas do cotidiano.</p>
+        <p>Os alunos trabalham em grupos multidisciplinares, o que ajuda a desenvolver habilidades técnicas e interpessoais, como trabalho em equipe, comunicação e gestão de tempo. Cada projeto envolve aplicar o conteúdo das disciplinas daquele semestre para resolver problemas ou criar produtos específicos</p>
         <ul>
             <router-link to="/portfolio-fatec-web/semestre-1">
                 <li>
