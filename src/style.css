@@ -309,6 +309,20 @@ summary {
     padding: 0;
   }
 
+  .container-apis{
+    p{
+      width: 100%;
+    }
+    ul{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      li{
+        width: auto;
+        margin: 3px;
+      }
+    }
+  }
+
   figure{
     display: flex;
     justify-content: center;
