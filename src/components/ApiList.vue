@@ -39,7 +39,7 @@
                 <li>
                     <img src="../assets/semester5/tecsus-logo.png"/>
                     5° Semestre
-                    <p>Em um cenário onde a paisagem urbana se compõe de uma mistura de edifícios modernos e históricos, a empresa Jaia, apresentou um desafio significativo. A condução de inspeções prediais estava provando ser uma tarefa morosa e suscetível a imprecisões.</p>
+                    <p>A TecSUS realiza a coleta e processamento de contas de energia, água e gás para diversas empresas dos setores do atacado e varejo. Cada conta coletada precisa ter todos os seus campos digitados e salvos em banco de dados para eventuais consultas e análises técnicas/financeiras que podem trazer ao cliente oportunidades de redução de custos e alteração de contratos.</p>
                     <span>saiba mais >></span>
                 </li>
             </router-link>
@@ -47,7 +47,7 @@
                 <li>
                     <img src="../assets/semester6/spc-logo.png"/>
                     6° Semestre
-                    <p>Em um cenário onde a paisagem urbana se compõe de uma mistura de edifícios modernos e históricos, a empresa Jaia, apresentou um desafio significativo. A condução de inspeções prediais estava provando ser uma tarefa morosa e suscetível a imprecisões.</p>
+                    <p>You've been hired by a financial asset registrar to create innovative new financial products using machine learning techniques. The company will provide a diverse database, containing historical information on a variety of financial assets, transactions and market behaviors. Its challenge is to explore this database, identify patterns and opportunities, and develop one or more financial products that can add value to both the company and its customers.</p>
                     <span>saiba mais >></span>
                 </li>
             </router-link>

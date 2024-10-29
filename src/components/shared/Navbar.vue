@@ -37,4 +37,10 @@ a{
 a.active, a:hover{
     color: #47c7c7;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar-container{
+        width: 80%;
+    }
+}
 </style>

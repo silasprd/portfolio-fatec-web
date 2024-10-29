@@ -284,6 +284,10 @@ a{
   }
 }
 
+summary {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   html, body, .app, main{
     display: block;
@@ -317,5 +321,13 @@ a{
 
   .title img{
     width: 100%;
+  }
+
+  .knowledges{
+    padding: 0;
+    ul{
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
