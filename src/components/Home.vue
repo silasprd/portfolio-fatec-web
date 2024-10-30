@@ -59,7 +59,7 @@ import "../style.css"
         </li>
         <li>       
           <img align="center" alt="Python-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />        
-          <p><b>Python: </b>Aprimorei minhas habilidades em python durante meu período na faculdade, onde pude desenvolver algoritmos como exemplos de criptografia e socket. Também fui desafiado a desenvolver um jogo de Batalha Naval reduzido, para matéria de algoritmos, conforme especificações do professor, onde fui contemplado com a nota máxima(10).</p>
+          <p><b>Python: </b>Aprimorei minhas habilidades em python durante meu período na faculdade, onde pude desenvolver algoritmos como exemplos de criptografia e socket. Também fui desafiado a desenvolver um jogo de Batalha Naval reduzido, para matéria de algoritmos, conforme especificações do professor, onde fui contemplado com a nota máxima(10). Você pode conferir este projeto em: https://github.com/silasprd/naval-battle</p>
         </li>
         <li>
           <img align="center" alt="JS-icon" height="35" width="50"
