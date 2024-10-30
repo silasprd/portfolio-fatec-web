@@ -67,8 +67,27 @@ import "../style.css"
         <p>Este pipelinne é acionado em pull requests para a branch dev. Ele realiza o checkout do repositório e configura o ambiente Python com a versão 3.10.5. Em seguida, ativa um ambiente virtual dentro do diretório tecsus, constrói a imagem Docker para garantir que as dependências estão corretas e executa as migrações do banco de dados usando o docker-compose. Por fim, roda testes unitários definidos com pytest, assegurando que a aplicação e suas dependências estejam funcionando corretamente antes de fusões na branch principal.</p>
         <img src="/src/assets/semester5/integration-pipeline.png" width="800"/>
         <p>Este outro pipeline é acionado em pull requests para a branch dev e executa testes de integração para validar a comunicação entre os módulos da aplicação. Ele começa pelo checkout do repositório, configura o ambiente Python com a versão 3.10.5 e ativa um ambiente virtual no diretório tecsus. Após essa preparação, o pipeline executa testes de integração com o pytest, usando docker-compose para garantir que os serviços estão interligados e operando corretamente antes de uma possível fusão no ambiente de desenvolvimento.</p>
+        <img src="/src/assets/semester5/deploy-pipeline.png" width="800"/>
+        <p>Este é o pipeline de deploy, que é acionado quando um pull request para a branch main é fechado. Ele realiza a automação de construção, envio e implantação da imagem Docker do backend, garantindo que a última versão esteja disponível em produção. Primeiro ele faz o checkout do repositório e configura o ambiente. Em seguida, autentica no Docker Hub usando credenciais armazenadas nos "secrets" DOCKER_USERNAME e DOCKER_PASSWORD. Na etapa de deploy, a imagem é puxada para o servidor de produção, onde o contêiner antigo é removido, e um novo contêiner é criado e executado na porta 8000. As variáveis de ambiente DATABASE_USERNAME, DATABASE_PASSWORD e DATABASE_URL são configuradas dinamicamente para permitir acesso seguro e adequado ao banco de dados, garantindo uma implantação contínua e sem interrupções para o backend.</p>
       </details>
       <br>
+      <details>
+        <summary><b>Implementação de Pipelines de Integração Contínua para o Frontend</b></summary>
+        <p>Também implementei os pipelines de integração contínua para automação de build, testes unitários e de integração, e deploy para o frontend. Verificando a qualidade do código em cada etapa, verificando e validando funcionalidades antes de disponibilizar novas versões em produção.</p>
+        <img src="/src/assets/semester5/build-front-pipeline.png" width="800"/>
+        <p>Este pipeline é acionado em pushs para qualquer branch exceto dev e main, e em pull requests direcionados ao branch dev. Ele executa uma série de etapas em um ambiente Ubuntu, começando com o checkout do repositório e a configuração do Node.js na versão 18. Em seguida, instala as dependências do projeto com npm install e realiza o build utilizando npm run build. Por fim, o pipeline executa os testes unitários com npm run test para garantir que as funcionalidades básicas do código estejam funcionando corretamente antes de possíveis merges ou deploys.</p>
+        <img src="/src/assets/semester5/integration-front-pipeline.png" width="800"/>
+        <p>Esse pipeline é responsável por executar testes de integração E2E do frontend no GitHub Actions. Ele verifica a integração entre o frontend e o backend, simulando um ambiente completo para validar o comportamento do sistema. O pipeline é acionado por uma pull request na branch dev. Configura o ambiente com Node.js (versão 18) e Python (versão 3.10.5) para suporte às dependências do frontend e do backend. Em seguida, executa npm install para instalar as dependências Node do projeto, preparando o ambiente para construção e execução dos testes. 
+        Na etapa seguinte, faz um pull da imagem do PostgreSQL e inicia um container com variáveis de ambiente específicas (POSTGRES_DB, POSTGRES_USER e POSTGRES_PASSWORD). O comando sleep e um loop pg_isready garantem que o PostgreSQL esteja totalmente pronto antes de continuar.
+        </p>
+        <p><b>Construção do container backend no ambiente: </b>Nesta etapa, realizmos um pull da imagem Docker do backend, garantindo a atualização, e constrói a imagem caso haja alterações no Dockerfile do backend. Em seguinda as migrações do Django são feitas usando comandos específicos (makemigrations e migrate), garantindo que o banco de dados PostgreSQL esteja sincronizado com o modelo. Criamos um superusuário no Django para garantir acesso administrativo durante os testes. E então, executamos o backend Django em um container expondo a porta 8000 para permitir que o frontend se conecte ao backend para as operações de teste.
+        Implementamos uma etapa adicional para garantir a disponibilidade do backend. O loop com sleep garante que o backend esteja pronto antes dos testes do frontend.</p>
+        <p>E por fim, utilizamos a ação oficial do Cypress para rodar os testes E2E. Primeiro, compila (npm run build) e serve (npm run serve) o frontend, e aguarda que ele esteja acessível em http://localhost:8080 para iniciar os testes de integração.</p>
+        <img src="/src/assets/semester5/deploy-front-pipeline.png" width="800"/>
+        <p>Esse pipeline de deploy automatiza o processo de construção e entrega do frontend da aplicação Tecsus. Ele é acionado em pushs para a branch main. Primeiro realizmos o checkout do código, configura o ambiente com Node.js e instala as dependências. Em seguida, executa o comando de build (npm run build), criando o artefato necessário para produção. Realizamos o login no Docker Hub usando secrets DOCKER_USERNAME e DOCKER_PASSWORD_FRONT configurados e faz um push da imagem Docker para o repositório no Docker Hub.
+        Por fim, em um ambiente self-hosted, o pipeline baixa a imagem, remove qualquer container em execução do frontend, e inicia um novo container, expondo o serviço na porta 80 para acesso externo.
+        </p>
+      </details>
     </section>
 
     <br><br>
@@ -82,12 +101,17 @@ import "../style.css"
       <br>
       <details>
           <summary><b>Python</b></summary>
-          <p>Utilizados para a estruturação e gerenciamento dos dados.</p>
+          <p>Utilizado para gerenciar e configurar o backend, e também realizar integrações entre o backend e o banco de dados</p>
       </details>
       <br>
       <details>
-          <summary><b>JavaScript:</b></summary>
+          <summary><b>JavaScript</b></summary>
           <p>Linguagem de programação fundamental para a interatividade das telas.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Github Actions</b></summary>
+          <p>Ferramenta utilizada para automatização de processos no desenvoltimento do software.</p>   
       </details>
     </section>
 
@@ -95,10 +119,10 @@ import "../style.css"
     <section class="section">
       <h3>Hard Skills</h3>
       <ul>
-        <li><b>Vue: </b> Desenvolvimento de habilidades avançadas em Vue, sendo capaz de desenvolver interfaces complexas de forma eficiente e escalável.</li><br>
-        <li><b>HTML e CSS: </b>Domínio de HTML e CSS, utilizando-os para criar layouts responsivos, estilizados com autonomia e o uso eficiente de flexbox e grid.</li><br>
-        <li><b>Javascript: </b>Conhecimento solidificado em JavaScript, utilizando-o para implementar interatividade e lógica de negócio nas aplicações web. Estou familiarizado com conceitos como manipulação do DOM, eventos, promessas e assincronicidade.</li><br>
-        <li><b>Análise de Requisitos e Design de Interface: </b>Desenvolvi habilidades avançadas na análise de requisitos de projeto e no design de interfaces de usuário. Minha capacidade inclui a compreensão das necessidades do usuário e a tradução dessas necessidades em soluções de design eficazes e intuitivas.</li>
+        <li><b>Vue: </b> Aprimorei habilidades em Vue.js ao desenvolver uma interface de usuário robusta e dinâmica para gestão dos contratos e usuários, com destaque para a organização e reutilização de componentes e gerenciamento de estado de forma eficiente.</li><br>
+        <li><b>Python: </b>Ganhei proficiência no uso de Python para estruturar e gerenciar o backend da aplicação, incluindo a configuração de banco de dados, execução de migrações e criação de APIs, garantindo um fluxo de dados seguro e bem estruturado.</li><br>
+        <li><b>Javascript: </b>Utilizei JavaScript de forma extensiva para integrar a lógica de negócio no frontend, manipulando eventos e interatividade, além de implementar validações e regras de negócio, assegurando uma experiência de usuário fluida.</li><br>
+        <li><b>Github Actions: </b> Desenvolvi habilidades em automação de pipelines CI/CD com GitHub Actions, implementando fluxos de build, testes, e deploy para backend e frontend. Otimizei o processo de entrega contínua e integração, integrando banco de dados e testes de integração com Docker, aprimorando a entrega de software de alta qualidade.</li>
       </ul>
     </section>
 
@@ -106,10 +130,11 @@ import "../style.css"
     <section class="section">
       <h3>Soft Skills</h3>
       <ul>
-        <li><b>Comunicação Efetiva: </b>A habilidade de comunicação foi fundamental durante todo o projeto, especialmente na interação com outros membros da equipe e na compreensão das necessidades dos usuários finais. Participei ativamente de reuniões para discussão de requisitos, feedbacks e resolução de problemas.</li><br>
-        <li><b>Trabalho em Equipe: </b>Colaborei de forma eficaz com outros membros da equipe de desenvolvimento, compartilhando conhecimento, dividindo tarefas e apoiando os colegas conforme necessário. Estabeleci um ambiente de trabalho colaborativo, onde ideias e soluções foram discutidas e implementadas em conjunto para alcançar os objetivos do projeto.</li><br>
-        <li><b>Adaptabilidade: </b>Demonstrei adaptabilidade ao lidar com mudanças nos requisitos do projeto e nos prazos de entrega. A capacidade de me ajustar rapidamente a novas circunstâncias e prioridades foi crucial para manter o progresso do desenvolvimento e garantir a entrega.</li><br>
-        <li><b>Criatividade e Inovação: </b>Demonstrei criatividade ao enfrentar desafios de design e implementação, propondo soluções inovadoras para problemas complexos. Explorei diferentes abordagens e técnicas para encontrar as melhores soluções que atendessem às necessidades dos usuários e aos requisitos do projeto.</li>
+        <li><b>Adaptabilidade: </b>Demonstrei flexibilidade ao lidar com ajustes no escopo do projeto e prazos, e também com ferramentas desconhecidas como as utilizadas na Integração Contínua. A capacidade de adaptar rapidamente soluções técnicas e ajustá-las conforme necessário foi essencial para garantir o progresso contínuo do desenvolvimento.</li><br>
+        <li><b>Organização e Gerenciamento de Tempo: </b>Fui capaz de balancear tarefas simultâneas, como o desenvolvimento do frontend e backend e a implementação de pipelines de integração. A priorização das atividades foi crucial para manter o fluxo de entregas no prazo e realizar implementações completas e funcionais.</li><br>
+        <li><b>Resolução de problemas: </b>Desenvolvi a habilidade de identificar e resolver problemas complexos, tanto no backend quanto no frontend, incluindo desafios com configurações de CI/CD e integrações de APIs. A capacidade de diagnosticar problemas e encontrar soluções eficazes contribuiu para a estabilidade e o sucesso do projeto.</li><br>
+        <li><b>Trabalho em equipe: </b>Colaborei ativamente com colegas em diversas áreas do projeto, dividindo responsabilidades e oferecendo suporte sempre que necessário. Essa colaboração permitiu a integração de componentes complexos e assegurou que todos trabalhássemos alinhados aos objetivos da aplicação.</li><br>
+        <li><b>Comunicação Efetiva: </b>Habilidade essencial durante o projeto, especialmente ao articular desafios técnicos e colaborar com a equipe. Participei de reuniões de alinhamento e resolução de problemas, garantindo que todos estivessem informados sobre o progresso e quaisquer obstáculos, além de obter feedbacks para aprimoramentos contínuos.</li>
       </ul>
     </section>
     <br><br>
