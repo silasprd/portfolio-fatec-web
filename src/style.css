@@ -136,6 +136,9 @@ header{
         margin-left: 10px;
         margin-block: 0;
         color: white;
+        a{
+          color: #47c7c7;
+        }
       }
     }
   }
