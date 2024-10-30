@@ -92,31 +92,6 @@ import "../style.css"
 
     <br><br>
     <section class="section">
-      <h3><b>Tecnologias desenvolvidas:</b></h3>
-      <p>Essas foram as tecnologias que eu desenvolvi e utilizei para realizar minhas tarefas neste projeto.</p>
-      <details>
-          <summary><b>Vue</b></summary>
-          <p>Como principal framework para o desenvolvimento das telas da interface.</p>  
-      </details>
-      <br>
-      <details>
-          <summary><b>Python</b></summary>
-          <p>Utilizado para gerenciar e configurar o backend, e também realizar integrações entre o backend e o banco de dados</p>
-      </details>
-      <br>
-      <details>
-          <summary><b>JavaScript</b></summary>
-          <p>Linguagem de programação fundamental para a interatividade das telas.</p>   
-      </details>
-      <br>
-      <details>
-          <summary><b>Github Actions</b></summary>
-          <p>Ferramenta utilizada para automatização de processos no desenvoltimento do software.</p>   
-      </details>
-    </section>
-
-    <br><br>
-    <section class="section">
       <h3>Hard Skills</h3>
       <ul>
         <li><b>Vue: </b> Aprimorei habilidades em Vue.js ao desenvolver uma interface de usuário robusta e dinâmica para gestão dos contratos e usuários, com destaque para a organização e reutilização de componentes e gerenciamento de estado de forma eficiente.</li><br>
