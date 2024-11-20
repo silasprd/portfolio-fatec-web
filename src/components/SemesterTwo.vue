@@ -199,7 +199,8 @@ public class CpfValidator{
       <h3>Hard Skills</h3>
       <ul style="font-weight: normal;">
         <li><b>Java: </b> Desenvolvi habilidade com a linguagem JAVA, sendo capaz de desenvolver soluções robustas e escaláveis para problemas de negócio. Meu conhecimento inclui o desenvolvimento de componentes reutilizáveis, a implementação de algoritmos eficientes e a utilização de padrões de design como MVC e Factory.</li><br>
-        <li><b>Desenvolvimento de Componentes Customizados: </b>Tenho experiência na criação de componentes personalizados para atender às necessidades específicas do projeto. Isso incluiu a construção do MaskedTextField, um componente que permite a entrada formatada de dados em campos de texto, e do CpfValidator, uma classe responsável por validar números de CPF de acordo com o algoritmo padrão.</li><br>
+        <li><b>Desenvolvimento de Máscaras Customizados: </b>Implementei o MaskedTextField, um componente avançado que permite a aplicação de máscaras customizadas para campos de texto. Este componente possibilita que os desenvolvedores definam regras específicas para entrada de dados, como números, caracteres, valores hexadecimais e mais. Além disso, projetei métodos como buildSemanticMask, resetSemanticMask e updateSemanticMask, que garantem que o campo seja formatado corretamente com base na máscara definida, proporcionando flexibilidade e precisão.</li><br>
+        <li><b>Validação de Dados de CPF: </b>Desenvolvi o CpfValidator, uma classe responsável por validar números de CPF com base no algoritmo oficial. A implementação inclui verificações rigorosas, como a identificação de CPFs inválidos (compostos por dígitos iguais) e a validação dos dígitos verificadores. Quando necessário, a classe lança exceções customizadas para garantir a integridade dos dados inseridos, promovendo maior confiabilidade no sistema.</li><br>
         <li><b>Integração de API REST: </b>Adquiri habilidades avançadas na integração de sistemas por meio de APIs RESTful. Durante o projeto, aprendi a consumir e manipular dados de APIs externas de forma eficiente e segura, garantindo a interoperabilidade entre diferentes sistemas.</li><br>
       </ul>
     </section>
@@ -207,8 +208,9 @@ public class CpfValidator{
     <section class="section">
       <h3>Soft Skills</h3>
       <ul style="font-weight: normal;">
-        <li><b>Coleta de Requisitos: </b>  Participei ativamente, contribuindo para a coleta de requisitos, entendo as expectativas do cliente e questionando os principais pontos destacados por ele.</li><br>
-        <li><b>Backlog priorizado: </b> Construção e priorização do backlog, e feedback contínuo com a equipe de desenvolvimento e cliente. Isso ajudou a garantir que o produto fosse entregue de forma iterativa e incremental, atendendo às necessidades do cliente de maneira eficaz e dentro do prazo de entrega.</li><br>
+        <li><b>Coleta e Priorização de Requisitos: </b>  Conduzi a comunicação com o cliente, traduzindo suas necessidades em requisitos claros para a equipe de desenvolvimento. Desenvolvi artefatos como histórias de usuários e participei na elaboração de um backlog priorizado, garantindo que as tarefas mais valiosas fossem entregues primeiro, alinhando o planejamento estratégico com os objetivos do cliente.</li><br>
+        <li><b>Gestão e Priorização de Backlog: </b> Transformei os requisitos coletados em um backlog organizado e priorizado. Trabalhei em estreita colaboração com a equipe para detalhar as tarefas e identificar prioridades baseadas no valor agregado ao cliente, mitigação de riscos e dependências técnicas, promovendo eficiência no desenvolvimento.</li><br>
+        <li><b>Trabalho em Equipe: </b> Colaborei de forma próxima com a equipe de desenvolvimento, trabalhando juntos na elaboração dos itens do backlog, garantindo que cada membro compreendesse sua função. Promovi um ambiente de confiança e troca de ideias, onde todos se sentiam encorajados a propor soluções inovadoras para desafios do projeto.</li><br>
       </ul>
     </section>
     <br><br>

@@ -287,8 +287,8 @@ import "../style.css"
 
     <br><br>
     <section class="section">
-      <h3><b>Tecnologias desenvolvidas:</b></h3>
-      <p>Essas foram as tecnologias que eu desenvolvi e utilizei para realizar minhas tarefas neste projeto.</p>
+      <h3><b>Tecnologias Aplicadas:</b></h3>
+      <p>Essas foram as tecnologias que eu utilizei para realizar minhas tarefas neste projeto.</p>
       <details>
           <summary><b>ReactJS</b></summary>
           <p>Como principal framework para o desenvolvimento das telas da interface.</p>  
@@ -309,11 +309,12 @@ import "../style.css"
     <section class="section">
       <h3>Hard Skills</h3>
       <ul>
-        <li><b>ReactJS: </b> Desenvolvimento de habilidades avançadas em ReactJS, sendo capaz de desenvolver interfaces complexas de forma eficiente e escalável. Meu conhecimento inclui o uso de componentes, hooks, roteamento e gerenciamento de estado com Redux ou Context API.</li><br>
-        <li><b>HTML e CSS: </b>Domínio de HTML e CSS, utilizando-os para criar layouts responsivos, estilizados com autonomia e o uso eficiente de flexbox e grid.</li><br>
-        <li><b>Javascript: </b>Conhecimento solidificado em JavaScript, utilizando-o para implementar interatividade e lógica de negócio nas aplicações web. Estou familiarizado com conceitos como manipulação do DOM, eventos, promessas e assincronicidade.</li><br>
-        <li><b>Integração de Reconheimento de Voz: </b> Adquiri habilidades intermediárias na integração de sistemas de reconhecimento de voz em aplicações web. Durante o projeto, aprendi a utilizar APIs e bibliotecas para captura e processamento de comandos de voz.</li><br>
-        <li><b>Análise de Requisitos e Design de Interface: </b>Desenvolvi habilidades avançadas na análise de requisitos de projeto e no design de interfaces de usuário. Minha capacidade inclui a compreensão das necessidades do usuário e a tradução dessas necessidades em soluções de design eficazes e intuitivas.</li>
+        <li><b>Integração de Reconheimento de Voz: </b> Habilidade em integrar sistemas de reconhecimento de voz em aplicações ReactJS, utilizando a biblioteca SpeechRecognition para capturar e processar comandos. Atuei na definição de padrões de voz e no desenvolvimento de uma interface para feedback visual em tempo real, aprimorando a interação usuário-aplicativo.</li><br>
+        <li><b>Validação e Cadastro de Dados: </b> Desenvolvimento de telas e formulários com validação em tempo real para cadastro de alunos, turmas e disciplinas. Meu trabalho garantiu a integridade dos dados e a usabilidade por meio de feedback visual e mensagens de erro claras.</li><br>
+        <li><b>ReactJS: </b> Desenvolvimento de interfaces escaláveis e complexas com ReactJS, utilizando componentes reutilizáveis, hooks, roteamento e gerenciamento de estado com Redux ou Context API. Contribuí significativamente para a criação de uma interface com reconhecimento de voz, integrando funcionalidades avançadas para melhorar a acessibilidade e a experiência do usuário.</li><br>
+        <li><b>HTML e CSS: </b>Domínio na criação de layouts responsivos e acessíveis, aplicando flexbox e grid para organizar elementos de maneira eficiente. Minha contribuição inclui a implementação de designs responsivos em telas críticas do projeto, garantindo compatibilidade com diversos dispositivos e navegadores.</li><br>
+        <li><b>Javascript: </b>Sólido conhecimento em JavaScript, aplicado à lógica de negócios e interatividade em aplicações web. Durante o projeto, implementei funcionalidades como manipulação do DOM, gerenciamento de eventos e integração de APIs. Um dos destaques foi a implementação de comandos por voz para adicionar alunos e criar disciplinas, utilizando promessas e assincronicidade.</li><br>
+        <li><b>Análise de Requisitos e Design de Interface: </b>Capacidade avançada de traduzir requisitos funcionais e não funcionais em soluções de design intuitivas. Colaborei na definição de requisitos para a criação de funcionalidades como cadastro por voz, e implementei interfaces que priorizam usabilidade e eficiência.</li>
       </ul>
     </section>
 
@@ -321,10 +322,10 @@ import "../style.css"
     <section class="section">
       <h3>Soft Skills</h3>
       <ul>
-        <li><b>Comunicação Efetiva: </b>A habilidade de comunicação foi fundamental durante todo o projeto, especialmente na interação com outros membros da equipe e na compreensão das necessidades dos usuários finais. Participei ativamente de reuniões para discussão de requisitos, feedbacks e resolução de problemas.</li><br>
-        <li><b>Trabalho em Equipe: </b>Colaborei de forma eficaz com outros membros da equipe de desenvolvimento, compartilhando conhecimento, dividindo tarefas e apoiando os colegas conforme necessário. Estabeleci um ambiente de trabalho colaborativo, onde ideias e soluções foram discutidas e implementadas em conjunto para alcançar os objetivos do projeto.</li><br>
-        <li><b>Adaptabilidade: </b>Demonstrei adaptabilidade ao lidar com mudanças nos requisitos do projeto e nos prazos de entrega. A capacidade de me ajustar rapidamente a novas circunstâncias e prioridades foi crucial para manter o progresso do desenvolvimento e garantir a entrega.</li><br>
-        <li><b>Criatividade e Inovação: </b>Demonstrei criatividade ao enfrentar desafios de design e implementação, propondo soluções inovadoras para problemas complexos. Explorei diferentes abordagens e técnicas para encontrar as melhores soluções que atendessem às necessidades dos usuários e aos requisitos do projeto.</li>
+        <li><b>Comunicação Efetiva: </b>A comunicação clara e objetiva foi essencial em todas as etapas do projeto. Participei ativamente de reuniões para levantamento e análise de requisitos, além de fornecer feedbacks construtivos e colaborar na resolução de problemas. Essa habilidade foi crucial para alinhar as expectativas dos usuários finais e garantir uma entrega satisfatória.</li><br>
+        <li><b>Trabalho em Equipe: </b>Colaborei de forma eficaz com outros membros da equipe de desenvolvimento, compartilhando conhecimento, dividindo as tarefas e apoiando os colegas conforme necessário. Estabeleci um ambiente de trabalho colaborativo, onde ideias e soluções foram discutidas e implementadas em conjunto para alcançar os objetivos do projeto.</li><br>
+        <li><b>Adaptabilidade: </b>Demonstrei flexibilidade ao lidar com mudanças nos requisitos do projeto e nos prazos de entrega. A capacidade de me ajustar rapidamente a novas circunstâncias e prioridades foi crucial para manter o progresso do desenvolvimento e garantir a entrega.</li><br>
+        <li><b>Criatividade e Inovação: </b>Propostas inovadoras foram parte do meu trabalho, especialmente na integração de reconhecimento de voz ao sistema e na criação de soluções para acessibilidade. Minha abordagem criativa permitiu enfrentar problemas de design e desenvolvimento de forma eficiente, sempre buscando atender as expectativas do usuário com soluções práticas e intuitivas.</li>
       </ul>
     </section>
     <br><br>

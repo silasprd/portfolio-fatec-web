@@ -27,7 +27,7 @@ import "../style.css"
       </div>
       <div>
         <img align="center" alt="JavaFX-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg">
-        <b>Springboot:</b> Backend
+        <b>SpringBoot:</b> Backend
       </div>
       <div>
         <img align="center" alt="JS-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg">
@@ -62,7 +62,7 @@ public interface ChecklistRepository extends JpaRepository <span><</span>Checkli
       <br>
       <details>
         <summary><b>Criação de Services para o Checklist</b></summary>
-        <p>Criamos um serviço utilizando o Springboot para tratamento dos dados de checklist, que é responsável por definir os itens que devem ser checados em um vistoria.</p>
+        <p>Criamos um serviço utilizando o SpringBoot para tratamento dos dados de checklist, que é responsável por definir os itens que devem ser checados em um vistoria.</p>
         <pre><code>
 @Service
 public class ChecklistService {
@@ -174,7 +174,7 @@ public DashboardDTO getOsByStatus() {
     <section class="section">
       <h3>Hard Skills</h3>
       <ul>
-        <li><b>Java e Springboot: </b>Dominei o desenvolvimento backend usando Java e o framework Spring Boot, especialmente na implementação do CRUD da entidade checklist. Isso incluiu a criação de endpoints RESTful que permitiram a manipulação eficiente dos dados de checklist, garantindo a integridade e a eficiência do sistema.</li><br>
+        <li><b>Java e SpringBoot: </b>Dominei o desenvolvimento backend usando Java e o framework Spring Boot, especialmente na implementação do CRUD da entidade checklist. Isso incluiu a criação de endpoints RESTful que permitiram a manipulação eficiente dos dados de checklist, garantindo a integridade e a eficiência do sistema.</li><br>
         <li><b>Vue: </b>Desenvolvi interfaces de usuário modernas e responsivas utilizando Vue. Isso incluiu a construção da interface de checklist, onde os inspetores poderiam adicionar, editar e visualizar detalhes relevantes das inspeções, e a interface de dashboard, que proporcionava uma visão clara e visual dos dados de inspeção.</li><br>
         <li><b>Manipulação de Dados e Visualização: </b> Desenvolvi habilidades para manipular e apresentar dados de maneira eficaz na tela de dashboard. </li><br>
         <li><b>JPQL (Java Persistence Query Language): </b>Utilizei o JPQL para criar consultas orientadas a objetos e manipular objetos persistentes no contexto do Spring Boot, permitindo consultas complexas e flexíveis aos dados armazenados no banco de dados.</li>

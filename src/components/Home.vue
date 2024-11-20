@@ -51,7 +51,7 @@ import "../style.css"
         </li>
         <li>
           <img align="center" alt="Java-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
-          <p><b>Java: </b>Colaborei no desenvolvimento de projetos acadêmicos para diversas empresas utilizando Java e Springboot. Dentre os projetos estão projetos de gestão de vagas de emprego, sistema gerenciador de vendas e um software de inspeção predial .</p>
+          <p><b>Java: </b>Colaborei no desenvolvimento de projetos acadêmicos para diversas empresas utilizando Java e SpringBoot. Dentre os projetos estão projetos de gestão de vagas de emprego, sistema gerenciador de vendas e um software de inspeção predial .</p>
         </li>
         <li>
           <img align="center" alt="Java-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg">

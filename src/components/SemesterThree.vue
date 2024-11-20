@@ -34,7 +34,7 @@ import "../style.css"
       <div>
         <img align="center" alt="JS-icon" height="35" width="50"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg">
-        <b>Springboot:</b> Backend
+        <b>SpringBoot:</b> Backend
       </div>
       <div>
         <img align="center" alt="JS-icon" height="35" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg">
@@ -189,10 +189,10 @@ findLucroPorCliente = async () => {
     <section class="section">
       <h3>Hard Skills</h3>
       <ul>
-        <li><b>Java: </b>Aprimorei minhas habilidades com a linguagem JAVA, criando componentes personalizados para atender as necessidades específicas do projeto, como algoritmos para cálculo de médias de vendas e previsão de quantidades ideais (calcularMediasePredizer), e para extração de dados de vendas para visualização gráfica (findDataGraphByVenda e findDataGraphByClients).</li><br>
-        <li><b>Springboot: </b>Adquiri experiência na integração de sistemas por meio de APIs REST através do Springboot, garantindo a comunicação eficiente entre o backend Java e o frontend, permitindo a manipulação e apresentação de dados de vendas.</li><br>
-        <li><b>React: </b>Aprimorei minhas habilidades na utilização do React para criar interfaces de usuário interativas e dinâmicas, utilizando a biblioteca Recharts para integração dos dados de gráficos vindo do backend com o frontend.</li><br>
-        <li><b>Manipulação de dados: </b>Utilize técnicas de manipulação de dados para calcular médias e prever vendas futuras, bem como para formatar e apresentar dados em gráficos, proporcionando insights valiosos para a tomada de decisões.</li><br>
+        <li><b>Desenvolvimento de Algoritmo de Predição em Java: </b>Criei algoritmos personalizados em Java, como o método calcularMediasePredizer, que calcula médias de vendas e prevê quantidades ideais com base em dados históricos. Este algoritmo permitiu maior precisão no planejamento de vendas, agregando inteligência aos processos da empresa.</li><br>
+        <li><b>Extração de Dados para Visualização Gráfico: </b>Desenvolvi habilidades em extração e manipulação de dados, criando métodos otimizados como findDataGraphByVenda e findDataGraphByClients em Java com Spring Boot. Esses métodos integram APIs REST para recuperar e estruturar dados de vendas, facilitando a geração de visualizações gráficas. Esses métodos demonstram minha capacidade de trabalhar com estruturas de dados complexas, realizar cálculos de negócio e garantir compatibilidade entre backend e frontend.</li><br>
+        <li><b>Integração de APIs REST com SpringBoot: </b>Adquiri experiência na integração de sistemas por meio de APIs REST através do SpringBoot, garantindo a comunicação eficiente entre o backend Java e o frontend React, permitindo a manipulação e apresentação de dados de vendas. Um exemplo foi a criação do endpoint clientsGraph, que coleta dados de lucro por cliente. Essas integrações garantiram a comunicação fluída entre os sistemas.</li><br>
+        <li><b>Criação de Interfaces de Usuário Interativas com React: </b>Desenvolvi interfaces dinâmicas utilizando React e a biblioteca Recharts. Com ela, transformei dados complexos do backend em gráficos interativos e visualmente atrativos, como gráficos de barras que apresentam lucros por cliente, facilitando o entendimento dos dados por usuários do sistema.</li><br>
       </ul>
     </section>
 
@@ -200,10 +200,10 @@ findLucroPorCliente = async () => {
     <section class="section">
       <h3>Soft Skills</h3>
       <ul>
-        <li><b>Colaboração em equipe: </b>Trabalhei em conjunto com outros desenvolvedores, lidando com diferentes aspectos do projeto, como o backend e a interface do usuário, demonstrando a capacidade de colaborar efetivamente.</li><br>
-        <li><b>Resolução de problemas: </b>Desenvolvimento de algoritmos para predição de vendas e coleta de dados para gráficos, resolvendo problemas técnicos complexos e implementando soluções para otimizar a visualização de dados e tomadas de decisão.</li><br>
-        <li><b>Comunicação: </b>A criação de dashboards e interfaces de usuário, juntamente com a documentação detalhada dos algoritmos e métodos, indica uma forte habilidade em comunicar informações técnicas de forma clara para outros membros da equipe.</li><br>
-        <li><b>Adaptabilidade: </b>Lidamos com uma variedade de tecnologias, como Spring Boot, React, MySQL e bibliotecas de gráficos, adaptando-se a diferentes ferramentas e linguagens conforme necessário para o projeto.</li><br>
+        <li><b>Planejamento Estratégico: </b>Durante o desenvolvimento do projeto, foi essencial definir prioridades e estruturar funcionalidades como os métodos de extração de dados findDataGraphByVenda e findDataGraphByClients. Planejei a implementação para garantir a entrega de uma solução eficiente e alinhada aos objetivos do sistema.</li><br>
+        <li><b>Organização: </b>A integração entre backend e frontend, envolvendo a manipulação de dados complexos e a criação de gráficos interativos, demandou uma abordagem estruturada para documentar processos e entregar soluções claras para a equipe.</li><br>
+        <li><b>Pensamento Analítico: </b>Identifiquei padrões e requisitos nos dados de vendas e clientes para transformá-los em insights visuais. Essa habilidade foi essencial para entender as necessidades do projeto e traduzi-las em funcionalidades práticas.</li><br>
+        <li><b>Atenção: </b>A construção de métodos para análise de dados exigiu um cuidado minucioso com a precisão dos cálculos, garantindo a exatidão das informações apresentadas nos gráficos e a integridade dos dados manipulados.</li><br>
       </ul>
     </section>
     <br><br>
