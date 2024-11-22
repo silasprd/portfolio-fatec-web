@@ -170,14 +170,45 @@ public DashboardDTO getOsByStatus() {
     </section>
 
     <br><br>
+
+    <section class="section">
+      <h3><b>Tecnologias Aplicadas:</b></h3>
+      <p>Essas foram as tecnologias que eu utilizei para realizar minhas tarefas neste projeto.</p>
+      <details>
+          <summary><b>Java e SpringBoot</b></summary>
+          <p> Implementação do backend, incluindo a criação de endpoints RESTful e serviços para a manipulação de dados. Utilizei o Spring Data JPA para definir repositories e consultas personalizadas com JPQL.</p>  
+      </details>
+      <br>
+      <details>
+          <summary><b>JPQL</b></summary>
+          <p>Utilização para a criação de consultas orientadas a objetos, como a exclusão em cascata de registros relacionados à entidade Checklist. Isso permitiu manipular dados com precisão e flexibilidade.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Lombok</b></summary>
+          <p>Criação de DTOs, reduzindo a necessidade de métodos manuais como getters, setters e construtores. Esse recurso foi utilizado para estruturar dados destinados à visualização no dashboard.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Vue.js</b></summary>
+          <p>Desenvolvimento das interfaces de usuário. O uso do Vue possibilitou a criação de telas modernas, responsivas e interativas, onde inspetores puderam gerenciar dados de inspeções e visualizar métricas em tempo real.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Chart.js</b></summary>
+          <p>Integração no frontend para exibir gráficos dinâmicos com base nos dados do DashboardDTO. Essa biblioteca possibilitou a visualização clara das métricas de inspeções.</p>   
+      </details>
+    </section>
+
+    <br><br>
      
     <section class="section">
       <h3>Hard Skills</h3>
       <ul>
-        <li><b>Java e SpringBoot: </b>Dominei o desenvolvimento backend usando Java e o framework Spring Boot, especialmente na implementação do CRUD da entidade checklist. Isso incluiu a criação de endpoints RESTful que permitiram a manipulação eficiente dos dados de checklist, garantindo a integridade e a eficiência do sistema.</li><br>
-        <li><b>Vue: </b>Desenvolvi interfaces de usuário modernas e responsivas utilizando Vue. Isso incluiu a construção da interface de checklist, onde os inspetores poderiam adicionar, editar e visualizar detalhes relevantes das inspeções, e a interface de dashboard, que proporcionava uma visão clara e visual dos dados de inspeção.</li><br>
-        <li><b>Manipulação de Dados e Visualização: </b> Desenvolvi habilidades para manipular e apresentar dados de maneira eficaz na tela de dashboard. </li><br>
-        <li><b>JPQL (Java Persistence Query Language): </b>Utilizei o JPQL para criar consultas orientadas a objetos e manipular objetos persistentes no contexto do Spring Boot, permitindo consultas complexas e flexíveis aos dados armazenados no banco de dados.</li>
+        <li><b>Desenvolvimento Backend com Java e SpringBoot: </b>Domínio do framework Spring Boot para implementar o CRUD da entidade Checklist, incluindo a criação de services e repositories com consultas personalizadas usando JPQL. Um exemplo significativo foi o método deleteByIdWithCascade, que garantiu exclusão em cascata com integridade relacional.</li><br>
+        <li><b>Manipulação de Dados e Visualização: </b> Desenvolvimento de funcionalidades para geração de dados estruturados usando o DTO DashboardDTO. Essa implementação possibilitou a construção de gráficos no dashboard, proporcionando insights claros e visuais para a tomada de decisões.</li><br>
+        <li><b>Uso do JPQL para Consultas Personalizadas: </b>Utilizei o JPQL para criar consultas orientadas a objetos e manipular objetos persistentes no contexto do Spring Boot, permitindo operações complexas e flexíveis aos dados armazenados no banco de dados.</li><br>
+        <li><b>Desenvolvimento Frontend com Vue.js: </b>Desenvolvi interfaces de usuário modernas e responsivas utilizando Vue. Isso incluiu a construção da interface de checklist, onde os inspetores poderiam adicionar, editar e visualizar detalhes relevantes das inspeções, e a interface de dashboard, que proporcionava uma visão clara e visual dos dados de inspeção.</li><br>
       </ul>
     </section>
 
@@ -185,10 +216,9 @@ public DashboardDTO getOsByStatus() {
     <section class="section">
       <h3>Soft Skills</h3>
       <ul>
-        <li><b>Comunicação Efetiva: </b>Capacidade de comunicar de forma clara e eficaz com membros da equipe de desenvolvimento, garantindo um entendimento comum dos requisitos do projeto.</li><br>
+        <li><b>Colaboração Multidisciplinar: </b>Trabalhei em conjunto com colegas com diferentes funções dentro do projeto, conectando as funcionalidades do backend com as interfaces do frontend para criar uma solução integrada e funcional.</li><br>
         <li><b>Resolução de problemas: </b>Aprimorei habilidades em identificar, analisar e resolver problemas de forma criativa e eficaz, buscando soluções inovadoras para desafios técnicos e organizacionais encontrados durante o desenvolvimento do software de inspeção predial.</li><br>
-        <li><b>Trabalho em equipe: </b>Desenvolvi aptidão para trabalhar de forma colaborativa em equipe, contribuindo com ideias, compartilhando conhecimento e apoiando os colegas para alcançar os objetivos do projeto de forma eficiente e eficaz.</li><br>
-        <li><b>Adaptabilidade: </b>Me adaptei a mudanças e imprevistos durante o ciclo de vida do projeto, mantendo uma atitude positiva e flexível diante de desafios e obstáculos, e ajustando-se rapidamente às novas demandas e requisitos.</li>
+        <li><b>Proatividade: </b>Antecipei necessidades do projeto, como a inclusão de exclusões em cascata e a modelagem dos gráficos no dashboard, propondo e implementando melhorias antes que se tornassem gargalos no desenvolvimento.</li><br>
       </ul>
     </section>
     <br><br>

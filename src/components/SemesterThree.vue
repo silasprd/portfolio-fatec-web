@@ -186,6 +186,33 @@ findLucroPorCliente = async () => {
     </section>
 
     <br><br>
+
+    <section class="section">
+      <h3><b>Tecnologias Aplicada:</b></h3>
+      <p>Essas foram as tecnologias que eu utilizei para realizar minhas tarefas neste projeto.</p>
+      <details>
+          <summary><b>SpringBoot</b></summary>
+          <p>Desenvolvimento do backend, incluindo APIs REST para coleta e manipulação de dados.</p>  
+      </details>
+      <br>
+      <details>
+          <summary><b>MySQL</b></summary>
+          <p> Armazenamento e gerenciamento de dados relacionados a vendas e clientes.</p>
+      </details>
+      <br>
+      <details>
+          <summary><b>React</b></summary>
+          <p>Criação de interfaces dinâmicas e interativas, incluindo dashboards para visualização de dados.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Recharts</b></summary>
+          <p>Implementação de gráficos personalizados para exibir informações de vendas e comportamento de clientes.</p>   
+      </details>
+    </section>
+
+    <br><br>
+
     <section class="section">
       <h3>Hard Skills</h3>
       <ul>

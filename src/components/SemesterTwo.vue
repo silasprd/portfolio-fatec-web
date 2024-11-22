@@ -195,6 +195,27 @@ public class CpfValidator{
     </section>
 
     <br><br>
+
+    <section class="section">
+      <h3><b>Tecnologias Aplicadas:</b></h3>
+      <p>Essas foram as tecnologias que eu utilizei para realizar minhas tarefas neste projeto.</p>
+      <details>
+          <summary><b>Java</b></summary>
+          <p>Implementação de funcionalidades avançadas, incluindo a criação de campos de entrada personalizados com máscaras e validação de CPF aplicando algoritmos rigorosos.</p>  
+      </details>
+      <br>
+      <details>
+          <summary><b>Git</b></summary>
+          <p>Controle de versões e colaboração para garantir rastreabilidade e segurança no desenvolvimento do projeto.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Scrum</b></summary>
+          <p>Atuação como Product Owner (PO), gerenciando backlog priorizado e transformando requisitos em histórias de usuário claras e compreensíveis.</p>   
+      </details>
+    </section>
+
+    <br><br>
     <section class="section">
       <h3>Hard Skills</h3>
       <ul style="font-weight: normal;">
