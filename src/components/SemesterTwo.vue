@@ -197,7 +197,7 @@ public class CpfValidator{
     <br><br>
 
     <section class="section">
-      <h3><b>Tecnologias Aplicadas:</b></h3>
+      <h3><b>Tecnologias Aplicadas</b></h3>
       <p>Essas foram as tecnologias que eu utilizei para realizar minhas tarefas neste projeto.</p>
       <details>
           <summary><b>Java</b></summary>

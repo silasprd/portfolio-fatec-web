@@ -88,16 +88,49 @@ import "../style.css"
         Por fim, em um ambiente self-hosted, o pipeline baixa a imagem, remove qualquer container em execução do frontend, e inicia um novo container, expondo o serviço na porta 80 para acesso externo.
         </p>
       </details>
+      <br>
+      <details>
+        <summary><b>Criação de componentes reutilizáveis no Frontend</b></summary>
+        <p>Desenvolvi componentes dinâmicos com Vue.js para padronizar e simplificar o desenvolvimento Frontend, garantindo consistência visual e funcional na interface do usuário. O código abaixo implementa um componente de input dinâmico.</p>
+        <img src="/src/assets/semester5/vue-component.png" width="800">
+        <p>O componente de input recebe propriedades como o label, type, modelValue e placeholder, permitindo configurá-lo de forma dinâmica. Ele utiliza a diretiva Vue para vincular o valor inserido no input ao modelo de dados pai por meio de props e eventos. Sempre que o usuário digita algo, o método updateInput emite o evento update:modelValue com o novo valor, atualizando o modelo no componente pai. Isso proporciona uma sincronização eficiente entre o componente e os dados do aplicativo.</p>
+      </details>
+    </section>
+
+    <br><br>
+
+    <section class="section">
+      <h3><b>Tecnologias Aplicadas</b></h3>
+      <p>Essas foram as tecnologias que eu utilizei para realizar minhas tarefas neste projeto.</p>
+      <details>
+          <summary><b>Github Actions</b></summary>
+          <p>Automatização de pipelines de CI/CD para integração e entrega contínua, incluindo testes e deploy de backend e frontend.</p>  
+      </details>
+      <br>
+      <details>
+          <summary><b>Python</b></summary>
+          <p>Estruturação do backend com criação de APIs RESTful, configuração de banco de dados e implementação de migrações para manipulação e persistência de dados.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Docker</b></summary>
+          <p>Configuração de containers para padronizar o ambiente de desenvolvimento e integração contínua, garantindo consistência entre as etapas de build, testes e deploy.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Vue.js</b></summary>
+          <p>Desenvolvimento da interface do usuário com componentes reutilizáveis e dinâmicos, incluindo o componentes de formulário e tabela para capturar e atualizar dados de forma eficiente.</p>   
+      </details>
     </section>
 
     <br><br>
     <section class="section">
       <h3>Hard Skills</h3>
       <ul>
-        <li><b>Vue: </b> Aprimorei habilidades em Vue.js ao desenvolver uma interface de usuário robusta e dinâmica para gestão dos contratos e usuários, com destaque para a organização e reutilização de componentes e gerenciamento de estado de forma eficiente.</li><br>
-        <li><b>Python: </b>Ganhei proficiência no uso de Python para estruturar e gerenciar o backend da aplicação, incluindo a configuração de banco de dados, execução de migrações e criação de APIs, garantindo um fluxo de dados seguro e bem estruturado.</li><br>
-        <li><b>Javascript: </b>Utilizei JavaScript de forma extensiva para integrar a lógica de negócio no frontend, manipulando eventos e interatividade, além de implementar validações e regras de negócio, assegurando uma experiência de usuário fluida.</li><br>
-        <li><b>Github Actions: </b> Desenvolvi habilidades em automação de pipelines CI/CD com GitHub Actions, implementando fluxos de build, testes, e deploy para backend e frontend. Otimizei o processo de entrega contínua e integração, integrando banco de dados e testes de integração com Docker, aprimorando a entrega de software de alta qualidade.</li>
+        <li><b>Integração e Automação com Github Actions: </b>Minha contribuição mais relevante foi a criação e otimização de pipelines CI/CD para automação dos processos de build, testes e deploy. Configurei integrações que utilizaram Docker para simular ambientes de produção, incluindo o uso do Backend e Banco de Dados em contêineres, o que reduziu significativamente erros e aumentou a eficiência na entrega contínua.</li><br>
+        <li><b>Desenvolvimento Backend com Python: </b>Domínio no uso de Python para estruturar o backend da aplicação. A criação de APIs RESTful, como a API que gerencia os Fornecedores de Água, garantiram a integração do frontend com o banco de dados e um fluxo de dados bem estruturado. Também configurei bancos de dados e implementei migrações, assegurando a consistência e a evolução dos dados da aplicação.</li><br>
+        <li><b>Desenvolvimento Frontend com Vue.js: </b> Contribuí significativamente para a construção de interfaces dinâmicas e responsivas, focando na gestão de contratos e usuários, com destaque para a organização e reutilização de componentes e gerenciamento de estado de forma eficiente. As interfaces e componentes desenvolvidos simplificaram a experiência do usuário, permitindo ações de forma intuitiva dentro da aplicação.</li><br>
+        <li><b>Uso do Docker para Desenvolvimento e Integrações: </b>Dominei o  uso de Docker para criar ambientes de desenvolvimento e integração consistentes, otimizando o processo de configuração e deploy. Configurei containers para separar o frontend e backend, garantindo isolamento e escalabilidade do projeto. Além disso, integrei o Docker ao fluxo de CI/CD utilizando pipelines automatizados para build, testes e deploy, o que resultou em uma entrega contínua mais ágil e confiável. Essa abordagem garantiu que os ambientes de desenvolvimento fossem idênticos aos de produção, reduzindo problemas relacionados à compatibilidade.</li><br>
       </ul>
     </section>
 
@@ -106,10 +139,8 @@ import "../style.css"
       <h3>Soft Skills</h3>
       <ul>
         <li><b>Adaptabilidade: </b>Demonstrei flexibilidade ao lidar com ajustes no escopo do projeto e prazos, e também com ferramentas desconhecidas como as utilizadas na Integração Contínua. A capacidade de adaptar rapidamente soluções técnicas e ajustá-las conforme necessário foi essencial para garantir o progresso contínuo do desenvolvimento.</li><br>
-        <li><b>Organização e Gerenciamento de Tempo: </b>Fui capaz de balancear tarefas simultâneas, como o desenvolvimento do frontend e backend e a implementação de pipelines de integração. A priorização das atividades foi crucial para manter o fluxo de entregas no prazo e realizar implementações completas e funcionais.</li><br>
-        <li><b>Resolução de problemas: </b>Desenvolvi a habilidade de identificar e resolver problemas complexos, tanto no backend quanto no frontend, incluindo desafios com configurações de CI/CD e integrações de APIs. A capacidade de diagnosticar problemas e encontrar soluções eficazes contribuiu para a estabilidade e o sucesso do projeto.</li><br>
-        <li><b>Trabalho em equipe: </b>Colaborei ativamente com colegas em diversas áreas do projeto, dividindo responsabilidades e oferecendo suporte sempre que necessário. Essa colaboração permitiu a integração de componentes complexos e assegurou que todos trabalhássemos alinhados aos objetivos da aplicação.</li><br>
-        <li><b>Comunicação Efetiva: </b>Habilidade essencial durante o projeto, especialmente ao articular desafios técnicos e colaborar com a equipe. Participei de reuniões de alinhamento e resolução de problemas, garantindo que todos estivessem informados sobre o progresso e quaisquer obstáculos, além de obter feedbacks para aprimoramentos contínuos.</li>
+        <li><b>Gestão de tempo e prioridades: </b>Conciliei o desenvolvimento de funcionalidades complexas da aplicação com o estudo e a implementação de um pipeline de integração contínua utilizando GitHub Actions. Essa habilidade foi essencial para equilibrar múltiplas demandas e garantir tanto a entrega de código funcional quanto a automação dos processos de build e deploy dentro dos prazos estipulados.</li><br>
+        <li><b>Resolução de problemas: </b>Desenvolvi a habilidade de identificar e resolver problemas complexos, tanto no backend quanto no frontend, incluindo desafios com configurações de CI/CD e configurações do Docker. Adaptei soluções rapidamente, investigando a fundo os problemas e implementando correções eficazes. A capacidade de diagnosticar problemas e encontrar soluções eficazes contribuiu para a estabilidade e o sucesso do projeto.</li><br>
       </ul>
     </section>
     <br><br>
