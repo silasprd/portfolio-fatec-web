@@ -67,49 +67,7 @@ import "../style.css"
           usuário para exibir feedback visual quando a assistente está ouvindo ativamente os comandos do usuário.</p>
         <p>O código abaixo permite aos usuários interagirem com o aplicativo por meio de comandos de voz. Para tal,
           utilizamos a bilbioteca SpeechRecognition do React. </p>
-        <pre><code>
-<span>export const Home = () =&gt; {</span>
-<span>
-        function onShowAlert(type) {
-            setAlert({
-            type: type,
-            text: "Olá! Sou o assistente BoardClass. Você pode pressionar o botão azul ao lado e me dar um comando por voz! ;)",
-            show: true,
-            });
-        }
-
-        useEffect(() => {
-            setTimeout(() => {
-            speak({
-                text: textSpeek,
-            });
-            onShowAlert("warning");
-            }, 1500);
-        }, []);
-
-        if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-            return (
-            <div className={styles.notSupportContainer}>
-                Browser is not Support Speech Recognition.
-            </div>
-            );
-        }
-        const handleListening = () => {
-            setIsListening(true);
-            microphoneRef.current.classList.add("listening");
-            SpeechRecognition.startListening({
-            continuous: true,
-            });
-        };
-
-        const stopListening = () => {
-            setIsListening(false);
-            microphoneRef.current.classList.remove("listening");
-            SpeechRecognition.stopListening();
-        };
-</span>
-<span>}</span>
-        </code></pre>
+        <img src="/src/assets/semester1/codes/on-show.png" width="800"/>
         <p>O componente inicializa os estados das variáveis para controlar se o aplicativo está ouvindo, mensagens a
           serem exibidas, e um alerta. Além disso, define funções para manipular o estado do alerta e exibir mensagens
           de boas-vindas. Se o navegador não suportar o reconhecimento de voz, uma mensagem de erro é renderizada. O
@@ -124,137 +82,10 @@ import "../style.css"
           eficiente.</p>
         <p> Este trecho de código habilita a criação de uma nova disciplina por meio de comandos de voz em um aplicativo
           React.</p>
-        <pre><code>
-<span>export const Home = () =&gt; {</span>
-<span>
-        useEffect(() => {
-            function disciplines() {
-            if (text3.includes("criar") || text3.includes("cadastrar")) {
-                handleCreateDiscipline();
-            }
-            }
-
-            disciplines();
-        }, [text3]);
-
-        if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-            return (
-            <div className="notSupportContainer">
-                Browser is not Support Speech Recognition.
-            </div>
-            );
-        }
-
-        const handleListening = () => {
-            setIsListening(true);
-            microphoneRef.current.classList.add("listening");
-            SpeechRecognition.startListening({
-            continuous: true,
-            });
-        };
-
-        const stopListening = () => {
-            if (text1) {
-            setText1("");
-            setText1(transcript);
-            } else {
-            setText1(transcript);
-            }
-            setIsListening(false);
-            resetTranscript();
-            console.log(text1);
-            microphoneRef.current.classList.remove("listening");
-            SpeechRecognition.stopListening();
-            resetTranscript();
-        };
-
-        const handleListening2 = () => {
-            setIsListening2(true);
-            microphoneRef2.current.classList.add("listening");
-            SpeechRecognition.startListening({
-            continuous: true,
-            });
-        };
-
-        const stopListening2 = () => {
-            if (text2) {
-            setText2("");
-            setText2(transcript);
-            } else {
-            setText2(transcript);
-            }
-            setIsListening2(false);
-            microphoneRef2.current.classList.remove("listening");
-            SpeechRecognition.stopListening();
-            resetTranscript();
-        };
-
-        const handleListening3 = () => {
-            setIsListening3(true);
-            microphoneRef3.current.classList.add("listening");
-            SpeechRecognition.startListening({
-            continuous: true,
-            });
-        };
-
-        const stopListening3 = () => {
-            if (text3) {
-            setText3("");
-            setText3(transcript);
-            } else {
-            setText3(transcript);
-            }
-            setIsListening3(false);
-            microphoneRef3.current.classList.remove("listening");
-            SpeechRecognition.stopListening();
-            resetTranscript();
-        };
-
-        function onCloseAlert(help) {
-            setAlert({
-            type: "",
-            text: "",
-            show: false,
-            });
-        }
-
-        function onShowAlert(type, index) {
-            setAlert({
-            type: type,
-            text: Globals.messages[index].message,
-            show: true,
-            });
-        }
-
-        const handleCreateDiscipline = async () => {
-            if (text1 === "" || text2 === "") {
-            onShowAlert("warning", 0);
-            } else {
-            setLoading(true);
-
-            const name = text1;
-            const description = text2;
-
-            try {
-                await api.post("subjects", { name, description });
-
-                setTimeout(() => {
-                onShowAlert("warning", 2);
-                setLoading(false);
-                setTimeout(() => {
-                    window.location.href = "/Help";
-                }, 3000);
-                }, 1000);
-            } catch (e) {
-                onShowAlert("warning", 6);
-            }
-        }
-</span>
-<span>}</span>
-        </code></pre>
+        <img src="/src/assets/semester1/codes/create-discipline.png" alt="discipline-register-screen" width="800">
         <p>Inicialmente, são definidos estados para controlar o reconhecimento de voz, o carregamento, as transcrições
           de voz e alertas. O componente também define referências de microfone. A função handleCreateDiscipline é
-          acionada quando um comando de voz para criar ou cadastrar uma disciplina é detectado. A função valida se os
+          acionada quando um comando de voz para criar ou cadastrar uma disciplina é detectado. As funções handleListening e stopListening são acionadas com ações nos botões dentro dos inputs. A função valida se os
           campos de nome e descrição da disciplina estão preenchidos. Em caso positivo, os dados são coletados e uma
           solicitação POST é enviada ao servidor para criar a disciplina.</p>
       </details>
@@ -300,7 +131,7 @@ import "../style.css"
       </details>
       <br>
       <details>
-          <summary><b>JavaScript:</b></summary>
+          <summary><b>JavaScript</b></summary>
           <p>Linguagem de programação fundamental para a interatividade das telas.</p>   
       </details>
     </section>
@@ -311,10 +142,8 @@ import "../style.css"
       <ul>
         <li><b>Integração de Reconheimento de Voz: </b> Habilidade em integrar sistemas de reconhecimento de voz em aplicações ReactJS, utilizando a biblioteca SpeechRecognition para capturar e processar comandos. Atuei na definição de padrões de voz e no desenvolvimento de uma interface para feedback visual em tempo real, aprimorando a interação usuário-aplicativo.</li><br>
         <li><b>Validação e Cadastro de Dados: </b> Desenvolvimento de telas e formulários com validação em tempo real para cadastro de alunos, turmas e disciplinas. Meu trabalho garantiu a integridade dos dados e a usabilidade por meio de feedback visual e mensagens de erro claras.</li><br>
-        <li><b>ReactJS: </b> Desenvolvimento de interfaces escaláveis e complexas com ReactJS, utilizando componentes reutilizáveis, hooks, roteamento e gerenciamento de estado com Redux ou Context API. Contribuí significativamente para a criação de uma interface com reconhecimento de voz, integrando funcionalidades avançadas para melhorar a acessibilidade e a experiência do usuário.</li><br>
-        <li><b>HTML e CSS: </b>Domínio na criação de layouts responsivos e acessíveis, aplicando flexbox e grid para organizar elementos de maneira eficiente. Minha contribuição inclui a implementação de designs responsivos em telas críticas do projeto, garantindo compatibilidade com diversos dispositivos e navegadores.</li><br>
-        <li><b>Javascript: </b>Sólido conhecimento em JavaScript, aplicado à lógica de negócios e interatividade em aplicações web. Durante o projeto, implementei funcionalidades como manipulação do DOM, gerenciamento de eventos e integração de APIs. Um dos destaques foi a implementação de comandos por voz para adicionar alunos e criar disciplinas, utilizando promessas e assincronicidade.</li><br>
-        <li><b>Análise de Requisitos e Design de Interface: </b>Capacidade avançada de traduzir requisitos funcionais e não funcionais em soluções de design intuitivas. Colaborei na definição de requisitos para a criação de funcionalidades como cadastro por voz, e implementei interfaces que priorizam usabilidade e eficiência.</li>
+        <li><b>Desenvolvimento de Interfaces de Usuario com ReactJS: </b> Desenvolvimento de interfaces escaláveis e complexas com ReactJS, utilizando componentes reutilizáveis, hooks, roteamento e gerenciamento de estado com Redux ou Context API. Contribuí significativamente para a criação de uma interface com reconhecimento de voz, integrando funcionalidades avançadas para melhorar a acessibilidade e a experiência do usuário.</li><br>
+        <li><b>Desenvolvimento Javascript: </b>Sólido conhecimento em JavaScript, aplicado à lógica de negócios e interatividade em aplicações web. Durante o projeto, implementei funcionalidades como manipulação do DOM, gerenciamento de eventos e integração de APIs. Um dos destaques foi a implementação de comandos por voz para adicionar alunos e criar disciplinas, utilizando promessas e assincronicidade.</li><br>
       </ul>
     </section>
 

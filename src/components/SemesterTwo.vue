@@ -45,139 +45,19 @@ import "../style.css"
       <details>
         <summary><b>Máscaras de entrada para campos de textos</b></summary>
         <p>A classe fornece uma maneira flexível de criar campos de texto com máscaras de entrada personalizadas, permitindo que os desenvolvedores definam regras específicas para o tipo de caracteres que são permitidos em cada posição do campo de texto.</p>
-        <pre><code>
-
-public class MaskedTextField extends TextField {
-
-  private static final char MASK_ESCAPE = '\'';
-  private static final char MASK_NUMBER = '#';
-  private static final char MASK_CHARACTER = '?';
-  private static final char MASK_HEXADECIMAL = 'H';
-  private static final char MASK_UPPER_CHARACTER = 'U';
-  private static final char MASK_LOWER_CHARACTER = 'L';
-  private static final char MASK_CHAR_OR_NUM = 'A';
-  private static final char MASK_ANYTHING = '*';
-
-  private int maskLength;
-  private char placeholder;
-  private StringProperty mask;
-  private StringProperty plainText;
-  private StringBuilder plainTextBuilder;
-
-  private List<span><</span>MaskCharacter> semanticMask;
-
-  public MaskedTextField() {
-      this("", '_');
-  }
-
-  public MaskedTextField(String mask) {
-      this(mask, '_');
-  }
-
-  public MaskedTextField(String mask, char placeholder) {
-      this.mask = new SimpleStringProperty(this, "mask", mask);
-      this.placeholder = placeholder;
-      this.plainText = new SimpleStringProperty(this, "plaintext", "");
-      this.plainTextBuilder = new StringBuilder();
-      this.semanticMask = new ArrayList<>();
-      
-      init();
-  }
-
-}
-        </code></pre>
+        <img src="/src/assets/semester2/codes/masked-text.png" alt="masked-text" width="800">
         <p>As constantes MASK_ESCAPE, MASK_NUMBER, MASK_CHARACTER, entre outras, são definidas para representar os diferentes tipos de caracteres na máscara de entrada.</p>
         <p>Em seguida, são definidos os atributos da classe, para armazenar o comprimento da máscara de entrada(maskLenght), propriedade de string que armazena a máscara de entrada(mask), string que armazena o texto sem formatação, entre outras. Também é definido o construtor da classe.</p>
         <p>Temos o método buildSemanticMask(), responsável por construir a máscara semântica com base na máscara de entrada. O método updateSemanticMask() atualiza a máscara semântica com base no novo texto sem formatação fornecido. O método resetSemanticMask() define todos os valores na máscara semântica como o marcador de espaço reservado (placeholder).</p>
-        <pre><code>
-private void buildSemanticMask() {
-  char[] newMask = getMask().toCharArray();
-  int i = 0;
-  int length = newMask.length;
-      
-  semanticMask.clear();
-      
-  MaskFactory factory = new MaskFactory();
-
-  while(i < length) {
-    char maskValue = newMask[i];
-
-    if (maskValue == MASK_ESCAPE) {
-        semanticMask.add(factory.createMask(maskValue, newMask[i + 1]));
-        i++;
-    } else {
-        char value = isLiteral(maskValue) ? maskValue : placeholder;
-        semanticMask.add(factory.createMask(maskValue, value));
-    }
-        
-    i++;
-  }
-        
-  maskLength = semanticMask.size();
-}
-
-private void resetSemanticMask() {
-    semanticMask.stream().forEach(maskCharacter-> maskCharacter.setValue(placeholder));
-}
-
-private void updateSemanticMask(String newText) {
-    resetSemanticMask();
-    stringToValue(newText);
-    setText(valuesToString());
-}
-      </code></pre>
-      <p>Esses 3 métodos garantem que o campo de texto seja corretamente formatado de acordo com a máscara de entrada e com o texto inserido pelo usuário.</p>
+        <img src="/src/assets/semester2/codes/masked-build.png" alt="masked-build" width="800">
+        <p>Esses 3 métodos garantem que o campo de texto seja corretamente formatado de acordo com a máscara de entrada e com o texto inserido pelo usuário.</p>
       </details>
       
       <br>
       <details>
         <summary><b>Validação de CPF</b></summary>
         <p>Também fui responsável por criar a classe de validação de CPF.</p>
-        <pre><code>
-package br.com.rh4vox.validator;
-
-import br.com.rh4vox.exception.ValidationException;
-
-public class CpfValidator{
-  public static void validate(String cpf) throws ValidationException {
-    String exceptionMessage = "CPF inválido";
-
-    String cpfNumbers = cpf.replace(".", "").replace("-", "");
-    int primeiroDigito = Character.getNumericValue(cpfNumbers.charAt(9));
-    int segundoDigito = Character.getNumericValue(cpfNumbers.charAt(10));
-    int somaPrimeiroDigito = 0, somaSegundoDigito = 0, sobra;
-
-    Integer number = null;
-    for(int i=0; i < 11; i++){
-      if(number == null)
-        number = Character.getNumericValue(cpfNumbers.charAt(i));
-
-      if(number != Character.getNumericValue(cpfNumbers.charAt(i)))
-        break;
-
-      if(i == 10)
-        throw new ValidationException(exceptionMessage);
-    }
-    for(int i=0; i < 9; i++){
-      int numberAtPosition = Character.getNumericValue(cpfNumbers.charAt(i));
-      somaPrimeiroDigito += numberAtPosition * (10-i);
-    }
-
-    sobra = 11 - (somaPrimeiroDigito % 11);
-    if(sobra > 10 && primeiroDigito != 0 || sobra < 10 && sobra != primeiroDigito)
-      throw new ValidationException(exceptionMessage);
-
-    for(int i=0; i < 10; i++){
-      int numberAtPosition = Character.getNumericValue(cpfNumbers.charAt(i));
-      somaSegundoDigito += numberAtPosition * (11-i);
-    }
-
-    sobra = 11 - (somaSegundoDigito % 11);
-    if(sobra > 10 && segundoDigito != 0 || sobra < 10 && sobra != segundoDigito)
-      throw new ValidationException(exceptionMessage);
-  }
-}
-        </code></pre>
+        <img src="/src/assets/semester2/codes/cpf-validator.png" alt="masked-build" width="800">
         <p>Este método recebe um CPF como uma string, remove os pontos e o traço do CPF, deixando apenas os números. Após isso criamos uma verificação em que todos os dígitos do CPF são iguais. Se forem, lança uma exceção de validação. Em seguinda calculamos o primeiro dígito verificador do CPF utilizando o algoritmo de validação. Se o primeiro dígito não corresponder, lança uma exceção de validação. Se o segundo dígito calculado corresponde ao segundo dígito real do CPF. Se não corresponder, lança uma exceção de validação.</p>
       </details>
       <br>
@@ -190,7 +70,7 @@ public class CpfValidator{
         <summary><b>Backlog priorizado</b></summary>
         <p style="font-weight: normal;">Após a coleta dos requisitos, fui responsável por transformar esses requisitos em itens de backlog priorizado, trabalhando em estreita colaboração com a equipe de desenvolvimento para elaborar os itens de forma clara, detalhada e compreensível. Os itens são priorizados com base no valor para o cliente, riscos, dependências e outras considerações estratégicas. O objetivo é garantir que a equipe esteja sempre trabalhando nas atividades mais importantes e que agreguem valor ao produto.</p>
         <p>Abaixo temos o backlog priorizado desenvolvido para o produto.</p>
-        <img align="center" alt="backlog" src="../assets/semester2/backlog.jpeg">
+        <img align="center" alt="backlog" src="../assets/semester2/backlog.jpeg" width="800">
       </details>
     </section>
 
