@@ -50,7 +50,7 @@ import "../style.css"
       <div>
         <img align="center" alt="JS-icon" height="35" width="50"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg">
-        <b>PostgresSQL:</b> Banco de dados
+        <b>PostgreSQL:</b> Banco de dados
       </div>
     </section>
     <br><br>
