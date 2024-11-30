@@ -5,7 +5,7 @@ import "../style.css"
 <template>
   <div class="box">
     <section class="title">
-      <h2>6º Semestre • 7/2023 - Software de Inspeção Predial</h2>
+      <h2>6º Semestre • 7/2024 - Software de Análise Financeira</h2>
       <h3>Repositório: <a href="https://github.com/Data-Team23/SPC-Grafeno" target="_blank">GIT</a></h3>
       <h3>Parceiro Acadêmico: <a href="https://spcgrafeno.com.br/" target="_blank">SPC Grafeno</a></h3>
       <img src="/src/assets/semester6/spc-grafeno.png" alt="jaia" width="800">
