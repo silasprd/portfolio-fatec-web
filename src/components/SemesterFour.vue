@@ -45,15 +45,7 @@ import "../style.css"
       <details>
         <summary><b>Criação de Repositories e definição de querys JPQL</b></summary>
         <p>Para a entidade Checklist usamos a interface JpaRepository para definir um repositório para ela.</p>
-        <pre><code>
-@Repository
-public interface ChecklistRepository extends JpaRepository <span><</span>Checklist, Long>{   
-  @Modifying
-  @Transactional
-  @Query("DELETE FROM Checklist c WHERE c.id = ?1")
-  void deleteByIdWithCascade(Long id);
-}
-        </code></pre>
+        <img src="/src/assets/semester4/codes/checklist-repository.png" alt="checklist-repository" width="800">
         <p>O ChecklistRepository estende JpaRepository, que fornece um conjunto completo de métodos padrão para manipulação de dados. A anotação @Repository declara a interface como um componente de repositório Spring, que será automaticamente detectada e configurada.
         O método deleteByIdWithCascade faz uma deleção personalizada de um Checklist pelo seu ID, lidando com a exclusão em cascata de relações associadas.</p> 
         <p>A anotação @Modifying indica que o método executará uma operação de modificação no banco de dados. Com o @Transactional garantimos que a operação de modificação seja executada dentro de uma transação.
@@ -63,47 +55,7 @@ public interface ChecklistRepository extends JpaRepository <span><</span>Checkli
       <details>
         <summary><b>Criação de Services para o Checklist</b></summary>
         <p>Criamos um serviço utilizando o SpringBoot para tratamento dos dados de checklist, que é responsável por definir os itens que devem ser checados em um vistoria.</p>
-        <pre><code>
-@Service
-public class ChecklistService {
-
-  @Autowired
-  private ChecklistRepository checkListRepo;
-
-  @Autowired
-  private DepartamentoRepository departamentoRepo;
-
-  public Checklist novoChecklist(Checklist checklist, Long departamentoId) {
-      Optional<span><</span>Departamento> optDepartamento = departamentoRepo.findById(departamentoId);
-      if (optDepartamento.isPresent()) {
-          Departamento departamento = optDepartamento.get();
-          checklist.setDepartamento(departamento);
-          departamento.getChecklists().add(checklist);
-          departamentoRepo.save(departamento);
-          checklist = checkListRepo.save(checklist);
-      }
-      return checklist;
-  }
-
-  public List<span><</span>Checklist> buscarTodos() {
-      return checkListRepo.findAll();
-  }
-
-  public Checklist buscarPorId(Long id) {
-      Optional<span><</span>Checklist> optChecklist = checkListRepo.findById(id);
-      if (optChecklist.isEmpty()) {
-          throw new IllegalArgumentException("Checklist não encontrado!!");
-      }
-      Checklist checklist = optChecklist.get();
-      return checklist;
-  }
-
-  public void deletarPorId(Long id) {
-      checkListRepo.deleteByIdWithCascade(id);
-  }
-
-}
-        </code></pre>
+        <img src="/src/assets/semester4/codes/checklist-service.png" alt="checklist-service" width="800">
         <p>Utilizamos a anotação @Service para definir a classe como um componente de serviço no spring. O @Autowired injeta as dependências automaticamente para as classes de Repository que vamos utilizar.</p>
         <p>A função novoChecklist() cria e associa um checklist a um departamento que será buscao pelo departamentoId fornecido como parâmetro da função.</p>
         <p>A função buscarTodos() utiliza o Repository para obter todos os checklists exitentes no banco de dados.
@@ -114,58 +66,15 @@ public class ChecklistService {
       <details>
         <summary><b>Criação do DTO (Data Transfer Object) para o dashboard.</b></summary>
         <p>A classe DashboardDTO é uma estrutura de dados simples que encapsula as informações necessárias para a representação de um gráfico no dashboard.</p>
-        <pre><code>
-package com.dataTeam.jaia.jaia.DTO;
-
-import java.util.List;
-
-import lombok.Data;
-
-@Data
-public class DashboardDTO {
-  private List<span><</span>String> labels;
-  private List<span><</span>DatasetsDTO> datasets;
-}
-        </code></pre>
+        <img src="/src/assets/semester4/codes/dashboard-dto.png" alt="dashboard-dto" width="800">
         <p>A classe DashboardDTO é essencialmente um "container" que agrega os dados necessários para criar um gráfico no dashboard. Ela organiza os rótulos e os conjuntos de dados de forma estruturada, facilitando a transmissão desses dados para componentes de visualização, como gráficos em uma interface de usuário. A anotação @Data gera automaticamente os métodos padrões (getters, setters, toString, etc.) para os campos da classe.</p>
       </details>
       <br>
       <details>
         <summary><b>Desenvolvimento das funcionalidade para o tratamento dos dados do dashboard</b></summary>
         <p>Utilizando a classe DashboardDTO que contém as etiquetas (labels) e os conjuntos de dados (datasets) necessários para a visualização gráfica, desenvolvemos funções para pegar esses dados que serão usados nos dashboards.</p>
-        <pre><code>
-public DashboardDTO getOsByStatus() {
-  DashboardDTO dataDashboard = new DashboardDTO();
-  DatasetsDTO datasets = new DatasetsDTO();
-  List datasetsList = new ArrayList<>();
-  List ordens = ordemService.buscarTodasOrdemServico();
-  List labels = new ArrayList<>();
-  List osCountList = new ArrayList<>();
-  String[] barColors = { "#000000", "#2E2E48", "#626288", "#8080BF", "#6A6A69" };
-
-  Map<span><</span>String, Integer> osCountMap = new HashMap<>();
-
-  for (OrdemServico ordem : ordens) {
-      String osStatus = ordem.getStatus_ordem();
-      osCountMap.put(osStatus, osCountMap.getOrDefault(osStatus, 0) + 1);
-  }
-
-  for (Map.Entry<span><</span>String, Integer> entry : osCountMap.entrySet()) {
-      labels.add(entry.getKey());
-      osCountList.add(entry.getValue());
-  }
-
-  datasets.setData(osCountList);
-  // datasets.setLabel("Status da ordem");
-  datasets.setBorderWidth(1);
-  datasets.setBackgroundColor(barColors);
-  datasetsList.add(0, datasets);
-  dataDashboard.setLabels(labels);
-  dataDashboard.setDatasets(datasetsList);
-
-  return dataDashboard;
-}          
-        </code></pre>
+        <img src="/src/assets/semester4/codes/get-os-by-status.png" alt="dashboard-dto" width="800">
+        <p>Criamos 2 Objetos DashboardDTO e DatasetsDTO para armazenar os rótulos e datasets e configurar os dados e estilos do gráfico, como cores e largura de borda. A lista de todas as ordens de serviço é obtida através de ordemService.buscarTodasOrdemServico() e duas listas (labels e osCountList) são criadas para armazenar os rótulos (status das ordens) e os respectivos contadores. Um HashMap (osCountMap) é utilizado para contabilizar a quantidade de ordens por status. Os valores do mapa são transferidos para as listas labels (status) e osCountList (quantidade de ordens), assim como as configurações visuais, como cores de fundo (barColors) e largura da borda. Para finalizar o dataset é adicionado à lista datasetsList, e os rótulos e datasets são configurados no objeto DashboardDTO. É retornado o objeto DashboardDTO contendo todas as informações estruturadas.</p>
       </details>
     </section>
 
