@@ -51,6 +51,24 @@ import "../style.css"
 
     <section class="section">
       <h3>Contribuições pessoais</h3>
+      <p> Como parte da equipe de desenvolvimento fui responsável pelo desenvolvimento das interfaces de usuário da aplicação. Participei ativamente na modelagem dos dados da aplicação, principalmente na parte de usuários(LGPD). </p>
+      <details>
+        <summary><b>Desenvolvimento de componentes dinâmicos</b></summary>
+        <p>Desenvolvi componentes reutilizáveis no frontend, como o componente de tabela que nos permite exibir grandes volumes de dados de maneira organizada e navegável.</p>
+        <img src="/src/assets/semester6/codes/table-component.png" width="800"/>
+        <p>Este código gerencia o estado e o comportamento da tabela, incluindo filtros, ordenação e paginação. Ele utiliza referências (ref) e propriedades computadas (computed) para calcular os dados filtrados e ordenados com base nos valores inseridos pelo usuário. A paginação divide os dados em partes, navegáveis por botões de próxima e anterior. A ordenação é aplicada clicando nos cabeçalhos das colunas, alternando entre ascendente e descendente. Além disso, funções emitem eventos ao editar ou excluir linhas, enquanto o cálculo de linhas vazias mantém o layout consistente na última página.</p>
+      </details>
+      <br>
+      <details>
+        <summary><b>Configuração do Ambiente de Desenvolvimento com Docker</b></summary>
+        <p>Configurei a aplicação para funcionar em ambiente Docker utilizando um Dockerfile e um docker-compose garantindo um setup padronizado e replicável para desenvolvimento.</p>
+        <p>O código implementa uma API para a gestão de alertas de consumo de água, utilizando a classe APIView do Django Rest Framework.</p>
+        <img src="/src/assets/semester6/codes/dockerfile.png" width="800"/>
+        <p>O Dockerfile define a imagem base como node:18-alpine, configura o diretório de trabalho, instala as dependências do projeto e copia os arquivos necessários. Também expõe a porta 5173 e inicia o servidor com npm run dev, adequado para desenvolvimento.</p>
+        <img src="/src/assets/semester6/codes/docker-compose.png" width="800"/>
+        <p>Já o docker-compose organiza o ambiente, criando um serviço chamado app, que utiliza o Dockerfile.dev para construir a imagem. Ele mapeia a porta 5173 para acesso local e usa volumes para refletir alterações do código em tempo real. O arquivo também gerencia variáveis de ambiente</p>
+      </details>
+      <br>
     </section>
 
     <br><br>
