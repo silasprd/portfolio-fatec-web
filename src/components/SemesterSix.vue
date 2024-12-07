@@ -69,8 +69,56 @@ import "../style.css"
         <p>Já o docker-compose organiza o ambiente, criando um serviço chamado app, que utiliza o Dockerfile.dev para construir a imagem. Ele mapeia a porta 5173 para acesso local e usa volumes para refletir alterações do código em tempo real. O arquivo também gerencia variáveis de ambiente</p>
       </details>
       <br>
+      <details>
+        <summary><b>Criação de Gráficos Dinâmicos com Vue.js para Visualização de Métricas</b></summary>
+        <p>Implementei gráficos dinâmicos utilizando Vue.js e a biblioteca vue-chart-3, baseada no Chart.js, para exibir métricas RFM (Recência, Frequência e Valor Monetário). A solução inclui um gráfico de barras interativo.</p>
+        <img src="/src/assets/semester6/codes/graph-html.png" width="800"/>
+        <img src="/src/assets/semester6/codes/graph-options.png" width="800"/>
+        <p>Registramos os componentes que configuram o Chart.js para criar gráficos de barras e linhas e definimos opções que garantem um gráfico responsivo e bem formatado com escalas começando em zero.</p>
+        <img src="/src/assets/semester6/codes/graph-data.png" width="800"/>
+        <p>A função updateGraphData formata os dados recebidos da API para exibição no gráfico. Primeiro, ela obtém os dados utilizando clientApi.metricGraph e valida a resposta para garantir que seja um objeto válido. Em seguida, extrai os nomes dos clusters como labels e utiliza as métricas R (Recência), F (Frequência) e M (Valor Monetário) para criar arrays individuais de dados correspondentes. Esses valores são organizados em um formato esperado pelo componente de gráfico, com cada métrica representada como um dataset, incluindo configurações de cor e legenda. Por fim, o gráfico é atualizado dinamicamente.</p>
+      </details>
     </section>
 
+    <br><br>
+    <section class="section">
+      <h3><b>Tecnologias Aplicadas</b></h3>
+      <p>Essas foram as tecnologias que eu utilizei para realizar minhas tarefas neste projeto.</p>
+      <details>
+          <summary><b>VueJS</b></summary>
+          <p>Como principal framework para o desenvolvimento das telas da interface.</p>  
+      </details>
+      <br>
+      <details>
+          <summary><b>JavaScript</b></summary>
+          <p>Linguagem de programação fundamental para a interatividade das telas.</p>   
+      </details>
+      <br>
+      <details>
+          <summary><b>Docker</b></summary>
+          <p>Utilizado para isolar e padronizar o ambiente de desenvolvimento e execução da aplicação, garantindo consistência e facilidade de uso.</p>   
+      </details>
+    </section>
+
+    <br><br>
+    <section class="section">
+      <h3>Hard Skills</h3>
+      <ul>
+        <li><b>Configuração e Gestão de Containers com Docker: </b>Configurei e gerenciei contêineres Docker para criar um ambiente de desenvolvimento padronizado e replicável. Utilizei Dockerfile e docker-compose para isolar o frontend, backend e banco de dados, otimizando a consistência e escalabilidade do projeto. Essa abordagem reduziu o tempo de configuração e minimizou erros causados por inconsistências entre os ambientes.</li><br>
+        <li><b>Desenvolvimento de Componentes Dinâmicos no Frontend com Vue.js: </b>Desenvolvi componentes reutilizáveis e modulares, como o componente de tabela com funcionalidades de paginação, ordenação e filtros, melhorando a organização de grandes volumes de dados.</li><br>
+        <li><b>Criação de Gráficos Interativos para Visualização de Dados: </b> Implementei gráficos dinâmicos utilizando Vue.js e a biblioteca vue-chart-3, baseados no Chart.js, para exibir métricas como Recência, Frequência e Valor Monetário (RFM). Configurei os gráficos com opções personalizadas para responsividade e formatação clara, incluindo atualizações dinâmicas de dados provenientes de APIs.</li><br>
+      </ul>
+    </section>
+
+    <br>
+    <section class="section">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li><b>Trabalho em equipe: </b>Atuei de forma colaborativa com o resposável pela LGPD na aplicação, atuando principalmente na modelagem da estrutura de usuários com foco em proteção de dados pessoais e privacidade, utilizando boas práticas para armazenar informações sensíveis e criptografia.</li><br>
+        <li><b>Pensamento crítico: </b>Contribuí para decisões técnicas fundamentadas, avaliando o impacto das escolhas de  criptografia de dados, design de componentes e arquitetura no desempenho e na usabilidade da aplicação.</li><br>
+        <li><b>Organização e Gestão de Tempo: </b>Consegui equilibrar múltiplas responsabilidades, como desenvolvimento de componentes front-end dinâmicos, para serem usados por outros desenvolvedores do time, e configuração do ambiente de desenvolvimento com Docker para eliminar problemas causados por inconsistências entre os ambientes.</li><br>
+      </ul>
+    </section>
     <br><br>
   </div>
 </template>
