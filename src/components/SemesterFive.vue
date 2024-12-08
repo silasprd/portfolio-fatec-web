@@ -63,30 +63,40 @@ import "../style.css"
       <details>
         <summary><b>Implementação de Pipelines de Integração Contínua para o Backend</b></summary>
         <p>Implementei pipelines de integração contínua para automação de build, testes unitários e de integração, além do deploy. Esses pipelines garantem a qualidade do código em cada etapa, verificando e validando funcionalidades antes de disponibilizar novas versões em produção.</p>
+        <img src="/src/assets/semester5/unit-test.png" width="800"/>
+        <p>Este pipeline é acionado em pull requests para a branch dev. Ele realiza o checkout do repositório e configura o ambiente Python com a versão 3.10.5. Em seguida, ativa um ambiente virtual dentro do diretório tecsus, constrói a imagem Docker para garantir que as dependências estão corretas e executa as migrações do banco de dados usando o docker-compose. Por fim, roda testes unitários definidos com pytest, assegurando que a aplicação e suas dependências estejam funcionando corretamente antes de fusões na branch principal.</p>
         <img src="/src/assets/semester5/build-pipeline.png" width="800"/>
-        <p>Este pipelinne é acionado em pull requests para a branch dev. Ele realiza o checkout do repositório e configura o ambiente Python com a versão 3.10.5. Em seguida, ativa um ambiente virtual dentro do diretório tecsus, constrói a imagem Docker para garantir que as dependências estão corretas e executa as migrações do banco de dados usando o docker-compose. Por fim, roda testes unitários definidos com pytest, assegurando que a aplicação e suas dependências estejam funcionando corretamente antes de fusões na branch principal.</p>
-        <img src="/src/assets/semester5/integration-pipeline.png" width="800"/>
+        <br><br><br>
+        <img src="/src/assets/semester5/integration-test.png" width="800"/>
         <p>Este outro pipeline é acionado em pull requests para a branch dev e executa testes de integração para validar a comunicação entre os módulos da aplicação. Ele começa pelo checkout do repositório, configura o ambiente Python com a versão 3.10.5 e ativa um ambiente virtual no diretório tecsus. Após essa preparação, o pipeline executa testes de integração com o pytest, usando docker-compose para garantir que os serviços estão interligados e operando corretamente antes de uma possível fusão no ambiente de desenvolvimento.</p>
-        <img src="/src/assets/semester5/deploy-pipeline.png" width="800"/>
+        <img src="/src/assets/semester5/integration-pipeline.png" width="800"/>
+        <br><br><br>
+        <img src="/src/assets/semester5/deploy.png" width="800"/>
         <p>Este é o pipeline de deploy, que é acionado quando um pull request para a branch main é fechado. Ele realiza a automação de construção, envio e implantação da imagem Docker do backend, garantindo que a última versão esteja disponível em produção. Primeiro ele faz o checkout do repositório e configura o ambiente. Em seguida, autentica no Docker Hub usando credenciais armazenadas nos "secrets" DOCKER_USERNAME e DOCKER_PASSWORD. Na etapa de deploy, a imagem é puxada para o servidor de produção, onde o contêiner antigo é removido, e um novo contêiner é criado e executado na porta 8000. As variáveis de ambiente DATABASE_USERNAME, DATABASE_PASSWORD e DATABASE_URL são configuradas dinamicamente para permitir acesso seguro e adequado ao banco de dados, garantindo uma implantação contínua e sem interrupções para o backend.</p>
+        <img src="/src/assets/semester5/deploy-pipeline.png" width="800"/>
       </details>
       <br>
       <details>
         <summary><b>Implementação de Pipelines de Integração Contínua para o Frontend</b></summary>
         <p>Também implementei os pipelines de integração contínua para automação de build, testes unitários e de integração, e deploy para o frontend. Verificando a qualidade do código em cada etapa, verificando e validando funcionalidades antes de disponibilizar novas versões em produção.</p>
-        <img src="/src/assets/semester5/build-front-pipeline.png" width="800"/>
+        <img src="/src/assets/semester5/unit-test-front.png" width="800"/>
         <p>Este pipeline é acionado em pushs para qualquer branch exceto dev e main, e em pull requests direcionados ao branch dev. Ele executa uma série de etapas em um ambiente Ubuntu, começando com o checkout do repositório e a configuração do Node.js na versão 18. Em seguida, instala as dependências do projeto com npm install e realiza o build utilizando npm run build. Por fim, o pipeline executa os testes unitários com npm run test para garantir que as funcionalidades básicas do código estejam funcionando corretamente antes de possíveis merges ou deploys.</p>
-        <img src="/src/assets/semester5/integration-front-pipeline.png" width="800"/>
+        <img src="/src/assets/semester5/build-front-pipeline.png" width="800"/>
+        <br><br><br>
+        <img src="/src/assets/semester5/integration-test-front.png" width="800"/>
         <p>Esse pipeline é responsável por executar testes de integração E2E do frontend no GitHub Actions. Ele verifica a integração entre o frontend e o backend, simulando um ambiente completo para validar o comportamento do sistema. O pipeline é acionado por uma pull request na branch dev. Configura o ambiente com Node.js (versão 18) e Python (versão 3.10.5) para suporte às dependências do frontend e do backend. Em seguida, executa npm install para instalar as dependências Node do projeto, preparando o ambiente para construção e execução dos testes. 
-        Na etapa seguinte, faz um pull da imagem do PostgreSQL e inicia um container com variáveis de ambiente específicas (POSTGRES_DB, POSTGRES_USER e POSTGRES_PASSWORD). O comando sleep e um loop pg_isready garantem que o PostgreSQL esteja totalmente pronto antes de continuar.
+          Na etapa seguinte, faz um pull da imagem do PostgreSQL e inicia um container com variáveis de ambiente específicas (POSTGRES_DB, POSTGRES_USER e POSTGRES_PASSWORD). O comando sleep e um loop pg_isready garantem que o PostgreSQL esteja totalmente pronto antes de continuar.
         </p>
         <p><b>Construção do container backend no ambiente: </b>Nesta etapa, realizmos um pull da imagem Docker do backend, garantindo a atualização, e constrói a imagem caso haja alterações no Dockerfile do backend. Em seguinda as migrações do Django são feitas usando comandos específicos (makemigrations e migrate), garantindo que o banco de dados PostgreSQL esteja sincronizado com o modelo. Criamos um superusuário no Django para garantir acesso administrativo durante os testes. E então, executamos o backend Django em um container expondo a porta 8000 para permitir que o frontend se conecte ao backend para as operações de teste.
         Implementamos uma etapa adicional para garantir a disponibilidade do backend. O loop com sleep garante que o backend esteja pronto antes dos testes do frontend.</p>
         <p>E por fim, utilizamos a ação oficial do Cypress para rodar os testes E2E. Primeiro, compila (npm run build) e serve (npm run serve) o frontend, e aguarda que ele esteja acessível em http://localhost:8080 para iniciar os testes de integração.</p>
-        <img src="/src/assets/semester5/deploy-front-pipeline.png" width="800"/>
+        <img src="/src/assets/semester5/integration-front-pipeline.png" width="800"/>
+        <br><br><br>
+        <img src="/src/assets/semester5/deploy-front.png" width="800"/>
         <p>Esse pipeline de deploy automatiza o processo de construção e entrega do frontend da aplicação Tecsus. Ele é acionado em pushs para a branch main. Primeiro realizmos o checkout do código, configura o ambiente com Node.js e instala as dependências. Em seguida, executa o comando de build (npm run build), criando o artefato necessário para produção. Realizamos o login no Docker Hub usando secrets DOCKER_USERNAME e DOCKER_PASSWORD_FRONT configurados e faz um push da imagem Docker para o repositório no Docker Hub.
         Por fim, em um ambiente self-hosted, o pipeline baixa a imagem, remove qualquer container em execução do frontend, e inicia um novo container, expondo o serviço na porta 80 para acesso externo.
         </p>
+        <img src="/src/assets/semester5/deploy-front-pipeline.png" width="800"/>
       </details>
       <br>
       <details>
