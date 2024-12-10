@@ -100,7 +100,7 @@ header{
   }
 }
 
-.knowledges {
+.knowledges, .academic-experience, .professional-experience{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -196,6 +196,36 @@ a{
     a:hover {
       color: #47c7c7;
     }
+  }
+}
+
+.academic-experience, .professional-experience {
+  margin-top: 20px;
+  .title{
+    align-self: start;
+  }
+  ul{
+    li{
+      display: flex;
+      flex-direction: column;
+      color: #FFFFFF;
+      h3, h4{
+        margin: 3px 0;
+        b{
+          color: white;
+        }
+      }
+      h4{
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.academic-experience{
+  .title{
+    align-self: end;
+
   }
 }
 
