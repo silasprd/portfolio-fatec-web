@@ -27,11 +27,7 @@ import "../style.css"
         </div>
       </div>
       <br>
-      <p>Sou aluno de Banco de Dados na Fatec São José dos Campos e atuo como Analista de Desenvolvimento de Sistemas,
-        trabalhando com as tecnologias NodeJS e Angular. Tenho experiência com linguagens como Java, JavaScript, PHP,
-        HTML, CSS e frameworks como Angular, React, Vue, além de Node.js e bancos de dados como MySQL e MongoDB.
-        Estou sempre aprimorando meus conhecimentos em desenvolvimento web e novas tecnologias, com foco em oferecer
-        soluções criativas e eficientes.</p>
+      <p>Sou Silas, tenho 26 anos e sou Desenvolvedor Frontend na iez! Telecom. Sempre fui motivado por novos desafios e pela resolução de problemas complexos, o que me levou a seguir a carreira em desenvolvimento de sistemas. Gosto de trabalhar de forma flexível, onde posso me desafiar constantemente e aplicar soluções ágeis para problemas técnicos. Valorizo a colaboração no time e acredito que o aprendizado contínuo é essencial para o crescimento profissional.<br> Tenho grande interesse em Engenharia de Software, com foco em Desenvolvimento Web, onde tenho maior experiência, e estou sempre em busca de novas tecnologias para expandir minhas habilidades. Meu objetivo é contribuir para a criação de softwares de alta qualidade, com foco na entrega contínua e performance, enquanto continuo a me desenvolver e enfrentar novos desafios.</p>
       <br>
     </div>
     <div class="person">
