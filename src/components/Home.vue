@@ -113,9 +113,9 @@ import "../style.css"
       </li>
       <li>
         <h3>Tell link Engenharia</h3>
-        <h4><b>• Aprendiz de Desenvolvimento de Sistemas</b></h4>
-        <h4>06/2022 - 06/2024</h4>
         <h4><b>• Analista de Desenvolvimento de Sistemas</b></h4>
+        <h4>06/2022 - 06/2024</h4>
+        <h4><b>• Aprendiz de Desenvolvimento de Sistemas</b></h4>
         <h4>06/2024 - 11/2024</h4>
       </li>
       <li>
