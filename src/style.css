@@ -225,7 +225,9 @@ a{
 .academic-experience{
   .title{
     align-self: end;
-
+  }
+  .ul{
+    display: flex;
   }
 }
 
