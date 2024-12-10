@@ -130,6 +130,11 @@ import "../style.css"
     <ul>
       <li>
         <h3>Senai Santos Dumont</h3>
+        <h4><b>• Instalador e Reparador de Redes</b></h4>
+        <h4>06/2018 - 07/2019</h4>
+      </li>
+      <li>
+        <h3>Senai Santos Dumont</h3>
         <h4><b>• Técnico em Desenvolvimento de Sistemas</b></h4>
         <h4>08/2019 - 03/2021</h4>
       </li>
