@@ -226,12 +226,15 @@ a{
   }
 }
 
-.academic-experience{
+.academic-experience, .professional-experience{
   .title{
     align-self: end;
   }
-  .ul{
+  ul{
     display: flex;
+    li{
+      width: 100%;
+    }
   }
 }
 

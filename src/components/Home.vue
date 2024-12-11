@@ -105,14 +105,14 @@ import "../style.css"
       <li>
         <h3>Valltech</h3>
         <h4><b>• Estágio em Suporte Técnico</b></h4>
-        <h4>04/2022 - 06/2022</h4>
+        <h4>04/2022 - 07/2022</h4>
       </li>
       <li>
         <h3>Tell link Engenharia</h3>
         <h4><b>• Analista de Desenvolvimento de Sistemas</b></h4>
-        <h4>06/2022 - 06/2024</h4>
+        <h4>08/2024 - 11/2024</h4>
         <h4><b>• Aprendiz de Desenvolvimento de Sistemas</b></h4>
-        <h4>06/2024 - 11/2024</h4>
+        <h4>07/2022 - 08/2024</h4>
       </li>
       <li>
         <h3>iez! Telecom</h3>
